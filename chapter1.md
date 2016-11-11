@@ -12,15 +12,9 @@
   div 内存单元
   div byte ptr ds:[0]
 
+  含义：(al)=(ax)/(ds_16+0)的商
+  (ah)=(ax)/(ds_16+0)的余数
   ```
-
-  `div reg`
-
-  `div 内存单元`
-
-  `div byte ptr ds:[0]`
-  含义：\(al\)=\(ax\)\/\(ds\_16+0\)的商
-  \(ah\)=\(ax\)\/\(ds\_16+0\)的余数
 
 
 #### xor指令
