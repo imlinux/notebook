@@ -30,8 +30,8 @@
 2. 例如：
   ```
   mov dx, 3f8h
-  in al, dx ;从3f8h端口读入一个字节
-  out dx, al;向3f8h端口写入一个字节
+  in al, dx ;al用来存放要读入的数据。
+  out dx, al;al用开存放要发送到端口的数据
   ```
 
 
