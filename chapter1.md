@@ -11,4 +11,6 @@
 
   `div 内存单元`
 
+  `div byte ptr ds:[0]`
+
 
