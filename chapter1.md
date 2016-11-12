@@ -64,11 +64,11 @@
 
   ```
   section data1 align=16
-   p1: mov ax,1
+  p1: mov ax,1
   section data2 align=16
-   p2: mov ax,2
+  p2: mov ax,2
   section data3 align=16
-   p3: mov ax,3
+  p3: mov ax,3
 
   dw p1
   dw p2
@@ -84,7 +84,7 @@
 
   可以看到p1的汇编地址是0x0000，p2的汇编地址是0x0010,
   p3的汇编指地址是0x0020。都是相对于真个程序的起始位置来计算汇编地址的
+
 10. 添加vstart字句后
-
-
+    
 
