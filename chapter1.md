@@ -46,7 +46,7 @@
 1. `section 段名称`
 2. intel处理器要求段在内存中的其实起始物理地址是16字节对齐的。
 3. 汇编语言中定义的各个段，也有对齐的要求。具体做法是，在段定义中使用`align=`字句，用于指定某个section的汇编地址对齐方式。比如说`align=16`就表示段是16字节对齐的。
-4. \`\`\`
+4. ```
   section data1 align=16
   db 0x55
   section data2 align=16
@@ -54,6 +54,5 @@
   section data3 align=16
   db 0x77
 
-
-\`\`\`
+```
 
