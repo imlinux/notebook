@@ -87,17 +87,17 @@
 
 10. 添加vstart字句后
 
-  section data1 align=16
+  section data1 align=16 vstart=0
 
-   p1: mov ax,1
+  p1: mov ax,1
 
-  section data2 align=16
+  section data2 align=16 vstart=0
 
-   p2: mov ax,2
+  p2: mov ax,2
 
-  section data3 align=16
+  section data3 align=16 vstart=0
 
-   p3: mov ax,3
+  p3: mov ax,3
 
   dw p1
 
