@@ -63,12 +63,15 @@
   可以使用vstart字句解决这个问题。如下代码
   ```
   section data1 align=16
-      p1: mov ax,1
+     p1: mov ax,1
   section data2 align=16
-      p2: mov ax,2
+     p2: mov ax,2
   section data3 align=16
-      p3: mov ax,3
+     p3: mov ax,3
+
+  dw p1
+  dw p2
+  dw p3
   ```
 
-   
 
