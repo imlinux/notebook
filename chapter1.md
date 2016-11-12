@@ -86,7 +86,7 @@
   p3的汇编指地址是0x0020。都是相对于真个程序的起始位置来计算汇编地址的
 
 10. 添加vstart字句后
-    ```
+  ```
   section data1 align=16 vstart=0
   p1: mov ax,1
   section data2 align=16 vstart=0
@@ -95,6 +95,7 @@
   p3: mov ax,3
   dw p1
   dw p2
-  dw p3 ```
+  dw p3
+  ```
 
 
