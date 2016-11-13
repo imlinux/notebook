@@ -136,4 +136,5 @@
   jmp near 0x3000
   ```
 
+  near关键子可以省略，若没有指定short或near，编译器默认是near
 
