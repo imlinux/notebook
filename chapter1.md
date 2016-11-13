@@ -149,8 +149,7 @@
   jmp [jump_dest]
 
   jump_deat dw 0xc000
-  
 ```
 
-
+      near关键字可以省略
 
