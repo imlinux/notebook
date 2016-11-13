@@ -172,12 +172,35 @@
 
 #### call指令
 
-  与jmp指令类似，只是call指令会把当前的ip的入栈。
+与jmp指令类似，只是call指令会把当前的ip的入栈。
 
 1. 16位相对近调用
 
+  ```
+  call near proc_1
+  call proc_1
+  near关键字可以省略
+  ```
+
 2. 16位间接绝对近调用
 
+  ```
+  call cx
+  call [0x3000]
+  ```
+
 3. 16位直接绝对远调用
+
+  ```
+  call 0x2000:0x0030
+  ```
+
 4. 16位间接绝对远调用
+  ```
+  call far [0x2000]
+  call far [proc_1]
+  call far [bx]
+
+  ```
+
 
