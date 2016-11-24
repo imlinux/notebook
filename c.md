@@ -16,7 +16,8 @@
 1. ntohs 网络字节序转换为本地字节序
 2. inet_ntoa ip地址转换为文本
 
-### 字符操作相关函数1. isprint
+### 字符操作相关函数
+1. isprint
 
 ### linux共享库
 
