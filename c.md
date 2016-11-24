@@ -21,5 +21,9 @@
 
 ### linux共享库
 
-1. 共享库有三个名字："soname","real name","linker name"2. real name为lib+库名+.so+.主板本号+.次版本号+.发布版本号，一般在编译时指定如：`gcc -shared -fPIC hello.c -o libhello.so.1.1.1` 3. soname为lib+库名+.so+.主版本号,一般在编译时指定如：`gcc -shared -Wl,soname,libhello.so.1 -fPIC hello.c`,编译  成功后可用`readelf -d *.so | grep SONAME` 来查看是否生成了soname,任何可执行文件在编译成功后会记录它依赖库的soname，可以通过`readelf -d xx | grep NEEDED`  来验证。4. linker name为lib+库名+.so,在编译时指定的就是linker name,如`gcc main.c -l hello`,编译器会查找linker name。5. 只要在编译时指定了soname,则共享库的三个名字都必须存在否则在编译或运行时会报错
+1. 共享库有三个名字："soname","real name","linker name"
+2. real name为lib+库名+.so+.主板本号+.次版本号+.发布版本号，一般在编译时指定如：`gcc -shared -fPIC hello.c -o libhello.so.1.1.1` 
+3. soname为lib+库名+.so+.主版本号,一般在编译时指定如：`gcc -shared -Wl,soname,libhello.so.1 -fPIC hello.c`,编译  成功后可用`readelf -d *.so | grep SONAME` 来查看是否生成了soname,任何可执行文件在编译成功后会记录它依赖库的soname，可以通过`readelf -d xx | grep NEEDED`  来验证。
+4. linker name为lib+库名+.so,在编译时指定的就是linker name,如`gcc main.c -l hello`,编译器会查找linker name。
+5. 只要在编译时指定了soname,则共享库的三个名字都必须存在否则在编译或运行时会报错
 
