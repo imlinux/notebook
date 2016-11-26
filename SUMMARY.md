@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [汇编（nasm\/masm）](chapter1.md)
 * [内存屏障（）](内存屏障（）.md)
-* [shell](shell.md)
-    * [常用变量和特殊符号](常用变量.md)
-* [C](c.md)
 * [Linux](linux.md)
     * [rpm](rpm.md)
+    * [C](c.md)
+    * [shell](shell.md)
+        * [常用变量和特殊符号](常用变量.md)
 
