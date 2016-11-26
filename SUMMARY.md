@@ -6,4 +6,6 @@
 * [shell](shell.md)
     * [常用变量和特殊符号](常用变量.md)
 * [C](c.md)
+* [Linux](linux.md)
+    * [rpm](rpm.md)
 
