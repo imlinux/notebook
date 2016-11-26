@@ -12,6 +12,7 @@
   -T :不执行默认操作.
 
   -b :指定解压Sourcen个源代码。一般会配合-T来使用。因为如果不加-T则先解压Source0然后再解压Source0
-  -a :与-b选项类似，唯一的区别是-b是先解压再进入name-version，而-a是先进入name-version在解压。如果name-version不存在会报错。
+  -a :与-b选项类似，唯一的区别是-b是先解压再进入name-version，而-a是先进入name-version在解压。如果name-version不存在会报错。-a 选项一般需要配置-D选项防止前一个setup的解压的目录被删掉，也需要-T防止多次解压Source0。
 
+2. 
 
