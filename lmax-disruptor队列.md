@@ -6,7 +6,7 @@
 
 3. Sequece Barrier 
 
-   `addGatingSequences`
+   `addGatingSequences` 用于添加消费者的Sequnce,用来等待消费者
 4. Wait Strategy
 
 
