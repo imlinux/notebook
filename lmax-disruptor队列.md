@@ -3,10 +3,8 @@
 1. Sequnce :类似AtomicLong，提供了解决伪共享的功能
 
 2. Sequncer:
-
+`addGatingSequences` 用于添加消费者的Sequnce,用来等待消费者
 3. Sequece Barrier 
-
-   `addGatingSequences` 用于添加消费者的Sequnce,用来等待消费者
 4. Wait Strategy
 
 
