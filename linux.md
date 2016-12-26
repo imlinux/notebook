@@ -3,10 +3,12 @@
 1. 服务端配置
 
    权限设置
+
    ```
    restrict default kod nomodify notrap nopeer
-   restrict -6 default kod nomodify notrap nopeer noquery
+   restrict -6 default kod nomodify notrap nopeer
    ```
+
 
 
 
