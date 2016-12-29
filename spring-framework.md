@@ -32,7 +32,7 @@
 ### 开发模式
 
 1. xml配置或注解的方式
-   内部实现是依赖spring的aop，将事物管理横切进目标bean
+   内部实现是依赖spring的aop，将事物管理横切进目标bean。可以使用注解Transactional来定义事务（隔离，传播，回滚规则）
 2. 编程的方式操作事务
    1. 使用TransactionTemplate
    2. 直接使用PlatformTransactionManager
