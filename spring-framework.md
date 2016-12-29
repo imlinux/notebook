@@ -25,7 +25,7 @@
 
 1. PlatformTransactionManager核心接口，用于抽象事务操作，目前有3中实现：DataSourceTransactionManager对应与普通的jdbc，JtaTransactionManager对应jta事务管理，HibernateTransactionManager对应hinernate 的事务管理
 
-2. TransactionDefinition定义一个事务，然后使用PlatformTransactionManager创建
+2. TransactionDefinition定义一个事务，包括事务的传播，超时，然后使用PlatformTransactionManager创建
 
 3. TransactionStatus代表一个事务。
 
@@ -34,7 +34,8 @@
 1. xml配置或注解的方式
    内部实现是依赖spring的aop，将事物管理横切进目标bean
 2. 编程的方式操作事务
-   1. 222
+   1. 使用TransactionTemplate
+   2. 直接使用PlatformTransactionManager
 
 
 
