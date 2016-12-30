@@ -21,7 +21,7 @@
 
 # Spring xml定义解析
 ### 接口
-1. NamespaceHandler处理各个名字空间
+1. NamespaceHandler处理各个名字空间,如context,aop,tx等等
 
 
 # Transaction
