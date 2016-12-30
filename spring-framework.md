@@ -19,6 +19,11 @@
 
 3. ![](/assets/ApplicationContext.png)
 
+# Spring xml定义解析
+### 接口
+1. NamespaceHandler处理各个名字空间
+
+
 # Transaction
 
 ### 接口
