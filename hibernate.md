@@ -21,4 +21,9 @@
 6. jpa只支持pojo实体没有类似hbm的定义
 
 
+#### hibernate动态实体
+
+1. 
+
+
 
