@@ -29,6 +29,8 @@
 
 ### Persistence Contexts
 `org.hibernate.Session`API和`javax.persistence.EntityManager`API都代表一个持久化实体的上下文
+每个实体在Persistence Contexts和底层数据库都有一个状态：
+1. `transient`
 
 
 
