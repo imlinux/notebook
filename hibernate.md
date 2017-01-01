@@ -11,5 +11,10 @@
 1. hibernate.cfg.xml与使用hbm定义映射的唯一不同是使用hibernate.cfg.xml的mapping元素的class属性配置业务类
 2. 业务类使用jpa的注解来定义映射\(早期的版本使用hibernate自己的注解\)
 
+#### 使用jpa的api
+
+1. persistence.xml与hibernate.cfg.xml的作用类似，不过有一点不同的是，persistence.xml里还会包括映射的定义，也就是说persistence.xml
+将hibernate.cfg.xml和hbm文件融为一体，另外jpa规范指出persistence.xml必须放在META/persistence.xml
+
 
 
