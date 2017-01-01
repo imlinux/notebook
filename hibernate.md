@@ -18,7 +18,7 @@
 3. properties,psersistence.xml的一个子元素,用于各种jpa实现的配置。
 4. EntityManagerFactory和SessionFactory类似
 5. EntityManager与Session类似
-6. jpa只支持pojo实体没有类似hbm的定义
+6. jpa只支持pojo实体不支持动态实体
 
 
 #### hibernate动态实体
