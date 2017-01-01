@@ -1,4 +1,4 @@
-### Hibernate本地api
+### Hibernate和JPA api
 
 #### 使用hbm.xml定义映射关系
 
