@@ -27,4 +27,9 @@
 1. 使用Map作为实体类，但是必须使用hbm做定义
 
 
+### Persistence Contexts
+`org.hibernate.Session`API和`javax.persistence.EntityManager`API都代表一个持久化实体的上下文
+
+
+
 
