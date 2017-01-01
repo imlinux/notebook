@@ -15,6 +15,7 @@
 
 1. persistence.xml与hibernate.cfg.xml的作用类似定义数据源和jpa实现的配置，另外jpa规范指出persistence.xml必须放在META-INF/persistence.xml。
 2. persistence-unit,psersistence.xml的一个子元素，包含一批实体的定义。
+
 3. properties,psersistence.xml的一个子元素,用于各种jpa实现的配置。
 4. EntityManagerFactory和SessionFactory类似
 5. EntityManager与Session类似
