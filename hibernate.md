@@ -45,6 +45,7 @@
 
 1. ServiceRegistry 包含hibernate启动和运行所需要的服务分别为ClassLoaderService，IntegratorService，StrategySelector
 2. ClassLoaderService 类似classLoad的功能
+3. StrategySelector 类似java的ServiceLoader，模块化
 
 
 
