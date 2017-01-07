@@ -26,18 +26,25 @@
 
 1. 使用Map作为实体类，但是必须使用hbm做定义
 
-
 ### Persistence Contexts
-`org.hibernate.Session`API和`javax.persistence.EntityManager`API都代表一个持久化实体的上下文
-每个实体在Persistence Contexts和底层数据库都有一个状态：
-1. `transient`
-实体已经实例化，但是没有与任何一个Persistence Contexts关联，而且也不在数据库中存在
-2. `managed`, or `persistent`
-实体与Persistence Contexts相关连，额而且有可能已经存在数据库了
-3. `detached`
-实体有一个分配的id，但是不与Persistence Contexts相关连，
-4. `removed`
+
+`org.hibernate.Session`API和`javax.persistence.EntityManager`API都代表一个持久化实体的上下文  
+每个实体在Persistence Contexts和底层数据库都有一个状态：  
+1. `transient`  
+实体已经实例化，但是没有与任何一个Persistence Contexts关联，而且也不在数据库中存在  
+2. `managed`, or `persistent`  
+实体与Persistence Contexts相关连，额而且有可能已经存在数据库了  
+3. `detached`  
+实体有一个分配的id，但是不与Persistence Contexts相关连，  
+4. `removed`  
 实体有有一个分配的id，而且与一个Persistence Contexts相关连，但是计划从数据库中删除。
+
+
+
+### 源码阅读
+
+#### 启动hibernate相关代码
+
 
 
 
