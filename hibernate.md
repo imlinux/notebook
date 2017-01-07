@@ -55,8 +55,8 @@
 
 #### 临时记录
 
-1. AvailableSettings：包含hibernate的属性名
-2. Environment:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties()，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties()
+1. `AvailableSettings`：包含hibernate的属性名
+2. `Environment`:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties()，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties()
 
 
 
