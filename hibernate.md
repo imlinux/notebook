@@ -61,6 +61,7 @@
    2. `LoadedConfig`:用来保存解析的结果
    3. `settings`: 字段用来保存属性文件，它用Environment的属性文件初始化然后被hibernate.cfg.xml中的properites元素定义的内容覆盖。
    4. `aggregatedCfgXml`: 是LoadedConfig类型，保存了hibernate.cfg.xml定义的配置
+5. `MetadataSources`:用来添加hbm文件和实体类
 
 
 
