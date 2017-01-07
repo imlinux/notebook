@@ -44,7 +44,9 @@
 #### 启动hibernate相关代码
 
 1. ServiceRegistry 注册各种所需的服务，起到类似spring的IOC容器的作用，方便模块化。
-实现类有BootstrapServiceRegistryImpl，同时使用BootstrapServiceRegistry空接口做标记，包含三个hibernate服务分别为ClassLoaderService，IntegratorService，StrategySelector
+实现类有：
+BootstrapServiceRegistryImpl，使用BootstrapServiceRegistry空接口做标记，包含三个hibernate服务分别为ClassLoaderService，IntegratorService，StrategySelector。
+StandardServiceRegistryImpl，使用StandardServiceRegistry空接口做标记，依赖BootstrapServiceRegistry中的三个服务，主要负责注册更多hibernate的服务，同时保存hibernate.cfg.xml对应的jaxb对象。
 2. ClassLoaderService 类似classLoad的功能
 3. StrategySelector 类似java的ServiceLoader，会注册各种服务例如：Dialect
 4. AvailableSettings包含hibernate的属性配置
