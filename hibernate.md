@@ -51,20 +51,13 @@
 2. ServiceRegistry中的服务
    ClassLoaderService 类似classLoad的功能StrategySelector 类似java的ServiceLoader，会注册各种服务例如：Dialect，这三个服务存在于BootstrapServiceRegistry中，其他的服务参考StandardServiceInitiators。
 
-
-
 #### 临时记录
 
 1. `AvailableSettings`：包含hibernate的属性名
-2. `Environment`:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties()，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties()
+2. `Environment`:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties\(\)，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties\(\)
 3. `ServiceRegistry`:有分层关系，其中BootstrapServiceRegistryImpl为根，提供最基本的3中服务，StandardServiceRegistryImpl为第二级，提供hibernate的标准服务。
 4. `StandardServiceRegistryBuilder`:用来构建StandardServiceRegistryImpl，其中`configure`方法读取hibernate.cfg.xml，使用JAXB技术解析xml
-
-
-
-
-
-
+   1.  C
 
 
 
