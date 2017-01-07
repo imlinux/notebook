@@ -69,6 +69,6 @@
 7. `MetadataBuilderImpl`: 由MetadataSources内部使用，用来构建MetaData
    1. `sources`:字段，对MetadataSources的引用
    2. `options`:字段，MetadataBuildingOptionsImpl类型。
-   3. `build`：方法，
+   3. `build`：方法，使用jaxb处理hbm文件，生成xml的对象表示，然后调用MetadataBuildingProcess#build静态方法
 
 
