@@ -13,4 +13,6 @@
     * [Lmax Disruptor队列](lmax-disruptor队列.md)
     * [gc算法](gc算法.md)
     * [Hibernate](hibernate.md)
+    * [XML](xml.md)
+        * [JAXB](jaxb.md)
 
