@@ -65,5 +65,7 @@
    1. `serviceRegistry`字段
    2. `xmlMappingBinderAccess`字段，类型为`XmlMappingBinderAccess`使用Jaxb处理hbm文件
 6. `MetadataBuilderImpl`: 由MetadataSources内部使用，用来构建MetaData
+   1. `sources`:字段，对MetadataSources的引用
+   2. `options`:字段，MetadataBuildingOptionsImpl类型。
 
 
