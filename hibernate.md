@@ -44,6 +44,7 @@
 #### 启动hibernate相关代码
 
 1. ServiceRegistry 包含hibernate启动和运行所需要的服务分别为ClassLoaderService，IntegratorService，StrategySelector
+2. ClassLoaderService 类似classLoad的功能
 
 
 
