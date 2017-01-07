@@ -39,13 +39,11 @@
 4. `removed`  
 实体有有一个分配的id，而且与一个Persistence Contexts相关连，但是计划从数据库中删除。
 
-
-
 ### 源码阅读
 
 #### 启动hibernate相关代码
 
-
+1. ServiceRegistry 包含hibernate启动和运行所需要的服务分别为ClassLoaderService，IntegratorService，StrategySelector
 
 
 
