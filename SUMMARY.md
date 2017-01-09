@@ -15,4 +15,5 @@
     * [Hibernate](hibernate.md)
     * [XML](xml.md)
         * [JAXB](jaxb.md)
+* [GO](go.md)
 
