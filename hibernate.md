@@ -63,6 +63,9 @@
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
 
+###### StrategySelector策略选择
+StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#buildSelector方法默认会添加hibernate所有默认实现
+
 
 1. #### 临时记录
 2. `AvailableSettings`：包含hibernate的属性名
