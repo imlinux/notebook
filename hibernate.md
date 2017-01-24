@@ -51,6 +51,9 @@
 2. ServiceRegistry中的服务
    ClassLoaderService 类似classLoad的功能StrategySelector 类似java的ServiceLoader，会注册各种服务例如：Dialect，这三个服务存在于BootstrapServiceRegistry中，其他的服务参考StandardServiceInitiators。
 
+### 各种服务
+
+1. 
 #### 临时记录
 
 1. `AvailableSettings`：包含hibernate的属性名
@@ -69,6 +72,7 @@
 7. `MetadataBuilderImpl`: 由MetadataSources内部使用，用来构建MetaData
    1. `sources`:字段，对MetadataSources的引用
    2. `options`:字段，MetadataBuildingOptionsImpl类型。
-   3. `build`：方法，使用jaxb处理hbm文件，生成xml的对象表示，然后调用MetadataBuildingProcess#build静态方法
+   3. `build`：方法，使用jaxb处理hbm文件，生成xml的对象表示，然后调用MetadataBuildingProcess\#build静态方法
+
 
 
