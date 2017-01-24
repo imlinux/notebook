@@ -57,8 +57,11 @@
    1. ClassLoaderService
    2. IntegratorService
    3. StrategySelector
-2. 惰性实例化使用StandardServiceInitiator包装
-   1. 
+2. 惰性实例化使用StandardServiceInitiator包装,在调用ServiceRegistry的getService方法时实例化
+   1. CfgXmlAccessServiceInitiator
+   2. ConfigurationServiceInitiator
+   3. PropertyAccessStrategyResolverInitiator
+   4. ImportSqlCommandExtractorInitiator
 
 
 1. #### 临时记录
