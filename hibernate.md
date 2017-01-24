@@ -52,6 +52,14 @@
    ClassLoaderService 类似classLoad的功能StrategySelector 类似java的ServiceLoader，会注册各种服务例如：Dialect，这三个服务存在于BootstrapServiceRegistry中，其他的服务参考StandardServiceInitiators。
 
 ###### 各种服务
+服务有直接实例化的，和惰性实例化的
+1. 直接实例化
+   1. ClassLoaderService
+   2. IntegratorService
+   3. StrategySelector
+2. 惰性实例化使用StandardServiceInitiator包装
+   1. 
+
 
 1. #### 临时记录
 2. `AvailableSettings`：包含hibernate的属性名
