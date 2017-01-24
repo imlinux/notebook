@@ -58,7 +58,7 @@
    2. IntegratorService
    3. StrategySelector
 2. 惰性实例化使用StandardServiceInitiator包装,在调用ServiceRegistry的getService方法时实例化
-   1. CfgXmlAccessServiceInitiator可以访问hibernate.cfg.xml对应的jaxb对应的xml对象
+   1. CfgXmlAccessServiceInitiator 可以访问hibernate.cfg.xml对应的jaxb对应的xml对象
    2. ConfigurationServiceInitiator
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
