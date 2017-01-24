@@ -65,6 +65,12 @@
 
 ###### StrategySelector策略选择
 StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#buildSelector方法默认会添加hibernate所有默认实现
+1. Dialect,数据库方言
+2. jtaPlatforms,各种jta实现
+3. Transaction,各种事物实现
+4. EntityCopyObserverStrategies
+5. ImplicitNamingStrategies
+6. CacheKeysFactories
 
 
 1. #### 临时记录
