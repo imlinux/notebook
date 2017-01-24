@@ -51,25 +51,24 @@
 2. ServiceRegistry中的服务
    ClassLoaderService 类似classLoad的功能StrategySelector 类似java的ServiceLoader，会注册各种服务例如：Dialect，这三个服务存在于BootstrapServiceRegistry中，其他的服务参考StandardServiceInitiators。
 
-### 各种服务
+###### 各种服务
 
-1. 
-#### 临时记录
+1. #### 临时记录
+2. `AvailableSettings`：包含hibernate的属性名
 
-1. `AvailableSettings`：包含hibernate的属性名
-2. `Environment`:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties\(\)，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties\(\)
-3. `ServiceRegistry`:有分层关系，其中BootstrapServiceRegistryImpl为根，提供最基本的3中服务，StandardServiceRegistryImpl为第二级，提供hibernate的标准服务。
-4. `StandardServiceRegistryBuilder`:用来构建StandardServiceRegistryImpl，其中`configure`方法读取hibernate.cfg.xml，使用JAXB技术解析xml
+3. `Environment`:hibernate属性文件分为SessionFactory级别的和System级别的，SessionFactory级别的配置会覆盖System级别的配置，Environment负责系统级别的配置，它保存的就是System.getProperties\(\)，同时如果定义了hibernate.properties，则此文件中的属性会覆盖System.getProperties\(\)
+4. `ServiceRegistry`:有分层关系，其中BootstrapServiceRegistryImpl为根，提供最基本的3中服务，StandardServiceRegistryImpl为第二级，提供hibernate的标准服务。
+5. `StandardServiceRegistryBuilder`:用来构建StandardServiceRegistryImpl，其中`configure`方法读取hibernate.cfg.xml，使用JAXB技术解析xml
    1. `ConfigLoader`:用来解析hibernate.cfg.xml
    2. `LoadedConfig`:用来保存解析的结果
    3. `settings`: 字段用来保存属性文件，它用Environment的属性文件初始化然后被hibernate.cfg.xml中的properites元素定义的内容覆盖。
    4. `aggregatedCfgXml`: 是LoadedConfig类型，保存了hibernate.cfg.xml定义的配置
-5. `MetadataSources`:用来添加hbm文件和实体类
+6. `MetadataSources`:用来添加hbm文件和实体类
    1. `serviceRegistry`字段
    2. `xmlMappingBinderAccess`字段，类型为`XmlMappingBinderAccess`使用Jaxb处理hbm文件
-6. `XmlMappingBinderAccess`:MetadataSources内部使用
+7. `XmlMappingBinderAccess`:MetadataSources内部使用
    1. 
-7. `MetadataBuilderImpl`: 由MetadataSources内部使用，用来构建MetaData
+8. `MetadataBuilderImpl`: 由MetadataSources内部使用，用来构建MetaData
    1. `sources`:字段，对MetadataSources的引用
    2. `options`:字段，MetadataBuildingOptionsImpl类型。
    3. `build`：方法，使用jaxb处理hbm文件，生成xml的对象表示，然后调用MetadataBuildingProcess\#build静态方法
