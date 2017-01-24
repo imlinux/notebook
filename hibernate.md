@@ -57,12 +57,11 @@
    1. ClassLoaderService
    2. IntegratorService
    3. StrategySelector
-2. 惰性实例化使用StandardServiceInitiator包装,在调用ServiceRegistry的getService方法时实例化
+2. 惰性实例化使用StandardServiceInitiator包装,在调用ServiceRegistry的getService方法时实例化，StandardServiceInitiators中含有所有默认的服务。
    1. CfgXmlAccessServiceInitiator 持有hibernate.cfg.xml对应的jaxb对应的xml对象
    2. ConfigurationServiceInitiator 持有hibernate存放在Map中所有的配置，包括属性文件中的配置，hibernate.cfg.xml使用jaxb对象表示，可以通过`CfgXmlAccessService.LOADED_CONFIG_KEY`键获取。
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
-3. StandardServiceInitiators中含有所有默认的服务。
 
 
 1. #### 临时记录
