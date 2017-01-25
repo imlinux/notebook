@@ -63,7 +63,7 @@
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
    5. JdbcEnvironmentInitiator
-   6. DialectResolverInitiator
+   6. DialectResolverInitiator 解析Dialect
    7. DialectFactoryInitiator
    8. JdbcServicesInitiator
 
