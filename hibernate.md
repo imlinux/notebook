@@ -62,6 +62,10 @@
    2. ConfigurationServiceInitiator 持有hibernate存放在Map中所有的配置，包括属性文件中的配置，hibernate.cfg.xml使用jaxb对象表示，可以通过`CfgXmlAccessService.LOADED_CONFIG_KEY`键获取。
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
+   5. JdbcEnvironmentInitiator
+   6. DialectResolverInitiator
+   7. DialectFactoryInitiator
+   8. JdbcServicesInitiator
 
 ###### StrategySelector策略选择
 StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#buildSelector方法默认会添加hibernate所有默认实现
