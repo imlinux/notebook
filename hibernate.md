@@ -67,6 +67,7 @@
    7. DialectFactoryInitiator 确定使用什么Dialect，先判断`hibernate.dialect`是否设置，如果没有则使用DialectResolver来探测
    8. JdbcServicesInitiator
    9. MutableIdentifierGeneratorFactoryInitiator 多种主键生成策略
+   10. SchemaManagementToolInitiator 更新表结构
 
 ###### StrategySelector策略选择
 StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#buildSelector方法默认会添加hibernate所有默认实现
