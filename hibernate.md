@@ -62,7 +62,7 @@
    2. ConfigurationServiceInitiator 持有hibernate存放在Map中所有的配置，包括属性文件中的配置，hibernate.cfg.xml使用jaxb对象表示，可以通过`CfgXmlAccessService.LOADED_CONFIG_KEY`键获取。
    3. PropertyAccessStrategyResolverInitiator
    4. ImportSqlCommandExtractorInitiator
-   5. JdbcEnvironmentInitiator
+   5. JdbcEnvironmentInitiator 持有jdbc环境相关的信息，Dialect,sqlExceptionHelper, 等等，参见JdbcEnvironmentImpl
    6. DialectResolverInitiator 探测Dialect
    7. DialectFactoryInitiator 确定使用什么Dialect，先判断`hibernate.dialect`是否设置，如果没有则使用DialectResolver来探测
    8. JdbcServicesInitiator
