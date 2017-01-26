@@ -79,7 +79,8 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#b
 6. CacheKeysFactories
 
 ###### Hibernate加载实体对象
-1. PersistentClass hibernate通过解析`hibernate-mapping`对应的jaxb对象后最终生成的描述持久化类相关信息
+1. PersistentClass hibernate通过解析`hibernate-mapping`对应的jaxb对象后最终生成的描述持久化类相关信息。此类是个抽象类，具体是哪个实现类可以查看`MetadataBuildingProcess#build`
+2. EntityPersister 每个`PersistentClass`对应一个`EntityPersister`用来加载或持久话实体对象
 
 1. #### 临时记录
 2. `AvailableSettings`：包含hibernate的属性名
