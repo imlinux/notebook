@@ -78,6 +78,8 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder#b
 5. ImplicitNamingStrategies
 6. CacheKeysFactories
 
+###### Hibernate加载实体对象
+1. PersistentClass hibernate通过解析`hibernate-mapping`对应的jaxb对象后最终生成的描述持久化类相关信息
 
 1. #### 临时记录
 2. `AvailableSettings`：包含hibernate的属性名
