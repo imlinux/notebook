@@ -48,7 +48,7 @@
 
 1. TaskExecutor
 继承java的Executor接口，所以用法和java的Executor一样
-2. TaskScheduler
+2. TaskScheduler定义了调度方法。
    1. Trigger：触发器，由TaskScheduler使用，可以实现crond功能
 
 
