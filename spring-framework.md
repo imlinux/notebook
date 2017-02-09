@@ -42,7 +42,7 @@
    1. 使用TransactionTemplate
    2. 直接使用PlatformTransactionManager
 
-## Task Execution and Scheduling
+## 任务执行和调度
 
 ### 接口
 
