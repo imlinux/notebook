@@ -24,8 +24,6 @@
 
 1. NamespaceHandler处理各个名字空间,如context,aop,tx等等
 
-
-
 # Transaction
 
 ### 接口
@@ -44,10 +42,13 @@
    1. 使用TransactionTemplate
    2. 直接使用PlatformTransactionManager
 
-
-
 ## Task Execution and Scheduling
 
+### 接口
+
+1. TaskExecutor
+继承java的Executor接口，所以用法和java的Executor一样
+2. TaskScheduler
 
 
 
