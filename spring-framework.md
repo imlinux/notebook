@@ -19,10 +19,13 @@
 3. ![](/assets/ApplicationContext.png)
 
 # Spring xml定义解析
+
 ### 接口
+
 1. NamespaceHandler处理各个名字空间,如context,aop,tx等等
 
-### AnnotationConfigApplicationContext实现
+
+
 # Transaction
 
 ### 接口
@@ -40,6 +43,12 @@
 2. 编程的方式操作事务
    1. 使用TransactionTemplate
    2. 直接使用PlatformTransactionManager
+
+
+
+## Task Execution and Scheduling
+
+
 
 
 
