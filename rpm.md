@@ -16,3 +16,8 @@
 
 2. 
 
+
+
+### 相关资料
+1. [max-rpm](http://rpm.org/max-rpm-snapshot/)
+
