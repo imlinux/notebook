@@ -21,4 +21,5 @@
 ### 相关资料
 1. [rpm官方文档](http://rpm.org/documentation.html)
 2. [max-rpm](http://rpm.org/max-rpm-snapshot/)
+3. [红帽rpm文档](https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html)
 
