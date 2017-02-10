@@ -19,5 +19,6 @@
 
 
 ### 相关资料
-1. [max-rpm](http://rpm.org/max-rpm-snapshot/)
+1. [rpm官方文档](http://rpm.org/documentation.html)
+2. [max-rpm](http://rpm.org/max-rpm-snapshot/)
 
