@@ -11,7 +11,7 @@
     相当与
     long tmp = 0;
     tmp = tmp + b;
-    a=(tmp);
+    a=(tmp);//会截取
     ``` 
 
 
