@@ -5,3 +5,9 @@
                 svn://server.com/svn/repository/branches/your_branch \
                 -m "Branching from trunk to your_branch at HEAD_REVISION"
       ```
+3. 切换分支
+    ```
+    svn switch --relocate \
+      svn://server.com/svn/repository/trunk \
+      svn://server.com/svn/repository/branches/your_branch
+    ```
