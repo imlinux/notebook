@@ -11,3 +11,6 @@
       svn://server.com/svn/repository/trunk \
       svn://server.com/svn/repository/branches/your_branch
     ```
+    
+4. 更新
+    svn update
