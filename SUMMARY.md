@@ -20,5 +20,4 @@
 * [GO](go.md)
 * [算法和数据结构](算法和数据结构.md)
 * [常用软件](software.md)
-  * [svn](software/svn.md)
 
