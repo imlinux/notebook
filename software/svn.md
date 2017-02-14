@@ -3,5 +3,5 @@
 2. 创建分支
     ```svn cp svn://server.com/svn/repository/trunk \
                 svn://server.com/svn/repository/branches/your_branch \
-                  -m "Branching from trunk to your_branch at HEAD_REVISION"
+                -m "Branching from trunk to your_branch at HEAD_REVISION"
       ```
