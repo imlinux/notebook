@@ -15,7 +15,7 @@
 
 ### java.lang.ref用法
 
-[https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html\#package\_description](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#package_description)
+[官方文档](https://docs.oracle.com/javase/7/docs/api/java/lang/ref/package-summary.html#package_description)
 
 提供了**非强引用**功能,有限度的与gc交互功能。  
 默认情况下，java使用的都是强引用如`Object o = new Object()`，此时对象o为**强可达（strongly reachable）**，强可达会阻止gc回收对象。  
