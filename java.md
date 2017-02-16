@@ -13,7 +13,7 @@
     a=(tmp);//会截取
    ```
 
-### Java引用的用法
+###  java.lang.ref用法
 
 1. 强引用：默认的都是强引用
 2. SoftReference:
