@@ -16,6 +16,9 @@
 ### Java引用的用法
 
 1. 强引用：默认的都是强引用
-2. 
+2. SoftReference:
+3. WeakReference:
+4. PhantomReference:
+
 
 
