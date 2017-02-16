@@ -34,29 +34,29 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 
 ```
 public class M {
-    public static void main(String[] args) throws Exception{
-        new SoftReference(new Object());
-        ReferenceQueue rq = new ReferenceQueue();
 
-        A r = new A(new Object(), rq, "Hello");
+
+    public static void main(String[] args) throws Exception{
+        ReferenceQueue<Object> rq = new ReferenceQueue<>();
+
+        A r = new A(new Object(), rq, new FileOutputStream("/home/dong/1.csv"));
         System.out.println(r.get());
         System.gc();
-        System.out.println(rq.remove());
+
+        Object rA = rq.remove();
+        A rrA = (A)rA;
+        System.out.println(rrA.closeable);
+        rrA.closeable.close();
     }
 }
 
 
 class A extends PhantomReference<Object> {
 
-    public String v;
-    A(Object o, ReferenceQueue rq, String v) throws Exception{
+    public Closeable closeable;
+    A(Object o, ReferenceQueue rq, Closeable closeable) throws Exception{
         super(o,rq);
-        this.v = v;
-    }
-
-    @Override
-    public String toString() {
-        return v;
+        this.closeable = closeable;
     }
 }
 
