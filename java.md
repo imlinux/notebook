@@ -23,3 +23,7 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 
 **注意：** 只有referent被回收了，引用对象才会入队，而由于引用对象变得不可达而被回收是不会入队的。
 
+#### 三种引用类型的最佳实践
+1. SoftReference一般作为内存敏感的缓存，当内存不够的时候gc才会回收这部分referent对象。
+2. WeakReference一般实现类似 WeakHashMap的功能时使用
+
