@@ -14,11 +14,4 @@
    ```
 
 ###  java.lang.ref用法
-
-1. 强引用：默认的都是强引用
-2. SoftReference:
-3. WeakReference:
-4. PhantomReference:
-
-
-
+提供了**非强引用**功能,有限度的与gc交互功能。
