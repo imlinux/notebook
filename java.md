@@ -30,8 +30,6 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 
 #### 案例
 
-
-
 ```
 public class M {
     public static void main(String[] args) throws Exception{
