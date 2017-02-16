@@ -30,3 +30,36 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 
 #### 案例
 
+
+
+```
+public class M {
+    public static void main(String[] args) throws Exception{
+        new SoftReference(new Object());
+        ReferenceQueue rq = new ReferenceQueue();
+
+        A r = new A(new Object(), rq, "Hello");
+        System.out.println(r.get());
+        System.gc();
+        System.out.println(rq.remove());
+    }
+}
+
+
+class A extends PhantomReference<Object> {
+
+    public String v;
+    A(Object o, ReferenceQueue rq, String v) throws Exception{
+        super(o,rq);
+        this.v = v;
+    }
+
+    @Override
+    public String toString() {
+        return v;
+    }
+}
+```
+
+
+
