@@ -26,4 +26,5 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 #### 三种引用类型的最佳实践
 1. SoftReference一般作为内存敏感的缓存，当内存不够的时候gc才会回收这部分referent对象。
 2. WeakReference一般实现类似 WeakHashMap的功能时使用
+3. PhantomReference一般实现**资源清理功能**，如关闭文件。比java的finalization更灵活。
 
