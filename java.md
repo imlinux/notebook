@@ -28,3 +28,5 @@ SoftReference，WeakReference，PhantomReference从左到右引用越来越弱�
 2. WeakReference一般实现类似 WeakHashMap的功能时使用
 3. PhantomReference一般实现**资源清理功能**，如关闭文件。比java的finalization更灵活。
 
+#### 案例
+
