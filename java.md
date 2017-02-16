@@ -18,4 +18,4 @@
 默认情况下，java使用的都是强引用如`Object o = new Object()`，此时对象o为**强可达（strongly reachable）**，强可达会阻止gc回收对象。
 java.lang.ref提供了非强引用，即使对象被引用，gc也可以回收被引用的对象，而且会通知应用程序这个对象被回收了。
 
-SoftReference，WeakReference，PhantomReference从左到右引用越来越弱
+SoftReference，WeakReference，PhantomReference从左到右引用越来越弱，这三个类的实例叫做**引用对象（reference-object ）**，
