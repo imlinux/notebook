@@ -60,7 +60,7 @@ class A extends PhantomReference<Object> {
     }
 }
 
-相当与把closeable的生命周期与Object 0绑定到了一块儿，当o被回收后v也可以关闭了。
+相当与把closeable的生命周期与Object o绑定到了一块儿，当o被回收后v也可以关闭了。
 ```
 
 
