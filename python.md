@@ -40,4 +40,17 @@ else:
 
 ### 循环
 
+1. for循环
+```
+    //循环打印数组
+    for i in [1,2,3,4,5]:
+        print i
+        
+    //使用range()函数,range还有其他参数，请参考手册
+    for i in range(1,1000):
+        print i
+```
+
+2. while循环
+
 
