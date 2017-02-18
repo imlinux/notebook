@@ -184,21 +184,21 @@ l1 =
 
 2. 作用域
 
-```
-a=100
-def add(v):
-    return a+v;
-a=add(1);//a==101
-```
+   ```
+   a=100
+   def add(v):
+       return a+v;
+   a=add(1);//a==101
+   ```
 3. 引用类型
 
-```
-a=[1,2,3,4,5]
-def add(a):
-    a.append(6);  
-add(a);
-print a;
-```
+   ```
+   a=[1,2,3,4,5]
+   def add(a):
+       a.append(6);  
+   add(a);
+   print a;
+   ```
 
 
 
