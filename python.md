@@ -238,7 +238,16 @@ l1 =
    ```
    **一般构造方法用于设置属性和初始化值**
    
+5. 多态和继承
+   ```
+   class C1:
+      def m1(self):
+         print "c1"
    
+   class C2(C1):
+      def m1(self):
+         printf("c2");
+   ```
 5. 注意事项
    ```
    类的方法必须定义self参数 
