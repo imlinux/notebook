@@ -21,5 +21,5 @@
 * [算法和数据结构](算法和数据结构.md)
 * [常用软件](software.md)
   * [vertica](software/vertica.md)
-* [软件配置.md](.md)
+* [软件配置](软件配置.md)
 
