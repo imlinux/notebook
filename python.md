@@ -157,13 +157,13 @@ for key in sorted(m1.keys()):
 #### 函数
 
 1. 定义函数
-```
-def sayHello():
-    print 'hello'
-    
-def greet(message):
-    print message;
-```
+    ```
+    def sayHello():
+        print 'hello` 
+         
+    def greet(message):
+        print message;
+    ```
 
 
 
