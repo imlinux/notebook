@@ -20,6 +20,14 @@ type(v1);//可以知道变量的类型
 
 ### 分支语句
 
+1. if
+```
+if 1==1
+    print "true"
+else
+    print "hello"
+
+```
 
 
 
