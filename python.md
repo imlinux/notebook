@@ -22,9 +22,13 @@ type(v1);//可以知道变量的类型
 
 1. if
 ```
-if 1==1
+a=100
+b=100
+if a==b:
     print "true"
-else
+elif a>b:
+    print "a>b"
+else:
     print "hello"
 
 ```
