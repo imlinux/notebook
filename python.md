@@ -25,11 +25,11 @@ type(v1);//可以知道变量的类型
 a=100
 b=100
 if a==b:
-    print "true"
+    print "a==b"
 elif a>b:
     print "a>b"
 else:
-    print "hello"
+    print "else"
 
 ```
 
