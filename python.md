@@ -262,6 +262,17 @@ l1 =
 
 
 ### 模块/包
-
-
+模块就是一个普通的python文件
+   ```
+   # this is the file "my_module.py"
+   # we're going to use it in another program
+      def c_to_f(celsius):
+      fahrenheit = celsius * 9.0 / 5 + 32
+      return fahrenheit
+      
+   创建另一个使用my_module.py的python文件
+   
+   import my_module ;
+   my_module.c_to_f(1);
+   ```
 
