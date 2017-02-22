@@ -5,6 +5,7 @@
 * [内存屏障（）](内存屏障（）.md)
 * [Linux](linux.md)
   * [rpm](rpm.md)
+  * [kernel](kernel.md)
 * [C](c.md)
 * [shell](shell.md)
   * [常用变量和特殊符号](常用变量.md)
