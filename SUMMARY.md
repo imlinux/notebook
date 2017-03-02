@@ -26,4 +26,6 @@
   * [vertica](software/vertica.md)
 * [软件配置](软件配置.md)
 * [Python](python.md)
+* [web](web.md)
+  * [js](web/js.md)
 
