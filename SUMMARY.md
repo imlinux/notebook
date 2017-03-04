@@ -30,4 +30,5 @@
 * [Python](python.md)
 * [web](web.md)
   * [js](web/js.md)
+* [Rust](rust.md)
 
