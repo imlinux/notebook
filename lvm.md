@@ -18,4 +18,4 @@
     
 
 #### 相关资料
-    
+[lvm资料](https://app.yinxiang.com/shard/s59/nl/12200770/303763fa-3624-4b16-b441-cf81347c7d31/)    
