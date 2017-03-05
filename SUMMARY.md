@@ -33,4 +33,6 @@
 * [Rust](rust.md)
 * [DataBase](database.md)
   * [MVCC](database/mvcc.md)
+* [Language](language.md)
+  * [Rust](language/rust.md)
 
