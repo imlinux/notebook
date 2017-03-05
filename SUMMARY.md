@@ -30,9 +30,9 @@
 * [Python](python.md)
 * [web](web.md)
   * [js](web/js.md)
-* [Rust](rust.md)
 * [DataBase](database.md)
   * [MVCC](database/mvcc.md)
 * [Language](language.md)
   * [Rust](language/rust.md)
+  * [Python](language/python.md)
 
