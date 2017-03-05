@@ -33,4 +33,5 @@
 * [Language](language.md)
   * [Rust](language/rust.md)
   * [Python](language/python.md)
+  * [C](language/c.md)
 
