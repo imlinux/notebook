@@ -29,6 +29,7 @@
   * [js](web/js.md)
 * [DataBase](database.md)
   * [MVCC](database/mvcc.md)
+  * [vertica](database/vertica.md)
 * [Language](language.md)
   * [Rust](language/rust.md)
   * [Python](language/python.md)
