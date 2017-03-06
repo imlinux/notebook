@@ -22,8 +22,6 @@
   * [Swing](swing.md)
   * [常用框架](常用框架.md)
 * [算法和数据结构](算法和数据结构.md)
-* [常用软件](software.md)
-  * [vertica](software/vertica.md)
 * [软件配置](软件配置.md)
 * [web](web.md)
   * [js](web/js.md)
