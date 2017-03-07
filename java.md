@@ -22,7 +22,7 @@
 java.lang.ref提供了非强引用，即使对象被引用，gc也可以回收被引用的对象，而且会通知应用程序这个对象被回收了。  
 SoftReference，WeakReference，PhantomReference从左到右引用越来越弱，这三个类的实例叫做**引用对象（reference-object ）**，每个引用对象  
 都会引用到一个特定的对象，这个特定的对象叫**referent**,通过引用对象的get方法可以获得referent，PhantomReference是一个特例它的get方法始终返回null。  
-每个应用对象对可以注册一个ReferenceQueue队列，当gc回收了**referent**时会将应用对象入队到ReferenceQueue，这样应用程序可以得知referent已被回收，起到了通知的功能。
+每个应用对象对可以注册一个ReferenceQueue队列，当gc回收了**referent**时会将引用对象入队到ReferenceQueue，这样应用程序可以得知referent已被回收，起到了通知的功能。
 
 **注意：** 只有referent被回收了，引用对象才会入队，而由于引用对象变得不可达而被回收是不会入队的。
 
