@@ -275,6 +275,39 @@ l1 =
    import my_module ;
    my_module.c_to_f(1);
    ```
+
    
+### 文件输入输出
+
+1. 读取文件
+
+```
+my_file = open('/home/dong/1.txt', 'r');
+my_file.readlines();
+my_file.close();
+```
+2. 写文件
+`my_file.write("hello")`
+3. 序列化对象
+
+```
+import pickle;
+
+my_list = [1,2,3]
+
+pickle.dump(my_list, my_file);
+```
+
+4. 反序列化
+
+```
+import pickle;
+my_list = pickle.load(my_file);
+
+```
+
+      
+         
+               
 ### Python3与python2.7的差异
 
