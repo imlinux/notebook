@@ -33,4 +33,5 @@
   * [Rust](language/rust.md)
   * [Python](language/python.md)
   * [C](language/c.md)
+* [Cache替换算法](cache.md)
 
