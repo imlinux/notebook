@@ -1,12 +1,3 @@
-+++
-author = ""
-date = "2016-05-20T16:16:01+08:00"
-description = ""
-tags = []
-title = "extjs"
-
-+++
-
 ### Ext 核心
 
 ##### Element
