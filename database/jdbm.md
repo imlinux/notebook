@@ -7,3 +7,9 @@
 2. PageFile 
     这个类将文件封装为记录集合。每条记录有一个物理ID，为了提高速度，这些记录会被缓存。
     in-use列表存放脏记录，代表一个事物。
+    
+3. PageIo
+    对ByteBuffer的封装，代表一个页面。
+
+4. Storage
+    通过pageId和ByteBuffer与此接口实现交互
