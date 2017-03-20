@@ -74,3 +74,14 @@ title = "extjs"
 
 #### store
 1. Model.phantom在服务端不存在，在本地存在。即store.add()没有向远程同步
+
+
+
+
+
+
+#### 工具函数
+
+1. Ext.util.Format.htmlEncode()  html转义
+1. Ext.util.Format.htmlDecode()
+1. Ext.util.Format.stripScripts()
