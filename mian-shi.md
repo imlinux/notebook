@@ -12,5 +12,4 @@
 #### 单例模式
 
 1. 主要注意线程安全的问题
-2. 最佳实践
-[12](https://gist.github.com/imlinux/22dbefb508f790d5e84575a2e62ae08a.js)
+2. [最佳实践](https://gist.github.com/imlinux/22dbefb508f790d5e84575a2e62ae08a)
