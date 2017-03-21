@@ -14,12 +14,11 @@
 1. 主要注意线程安全的问题
 2. 最佳实践
 
-  
- \`\`\`
+\`\`\`
 
-/_\*  
+/_\*    
  _使用静态内部类：一个类直到被使用时才被初始化。  
- _  
+ _    
  _/  
  public class Singleton {
 
@@ -64,7 +63,7 @@ public static LazySingleton getInstance() {
 
 public int getSomeField() {  
     return this.someField;                                // (7)  
-}  
+}
 ```
 
 }
