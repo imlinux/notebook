@@ -67,4 +67,5 @@
         return this.someField;                                // (7)  
     }  
    }
+   
    ```
