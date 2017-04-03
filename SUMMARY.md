@@ -21,6 +21,7 @@
   * [Swing](swing.md)
   * [常用框架](常用框架.md)
   * [面试](mian-shi.md)
+  * [并发](bing-fa.md)
 * [算法和数据结构](算法和数据结构.md)
 * [软件配置](软件配置.md)
 * [web](web.md)
