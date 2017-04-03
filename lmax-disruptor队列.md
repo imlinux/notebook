@@ -9,6 +9,6 @@
    　　　用于通知消费者有数据可消费，与`addGatingSequences类似`
 4. Wait Strategy
 5. EventProcessor继承Runnale, 添加了isRunning(), halt()等方法。代表一个线程。可以设置ExceptionHandler来处理异常
-
+6. EventHandlerGroup, 一组EventProcessor
 
 
