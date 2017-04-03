@@ -8,6 +8,7 @@
 3. Sequece Barrier 
    　　　用于通知消费者有数据可消费，与`addGatingSequences类似`
 4. Wait Strategy
+5. EventProcessor继承Runnale, 添加了isRunning(), halt()等方法。代表一个线程
 
 
 
