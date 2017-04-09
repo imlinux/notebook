@@ -16,4 +16,4 @@
     通过pageId和ByteBuffer与此接口实现交互
     
 5. PageManager
-   使用PageFile实例来管理页面，0号页面用来保存元数据
+   使用PageFile实例来管理页面,使用链表的方式来组织页面，0号页面用来保存元数据
