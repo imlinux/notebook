@@ -19,7 +19,7 @@
    使用PageFile实例来管理页面,使用链表的方式来组织页面，0号页面用来保存元数据  
    **头的结构**
 
-   | 位置 | 值 | 固定记录长度 |
+   | rowID | 值 | 固定记录长度 |
    | :--- | :--- | :--- |
    | FILE\_HEADER\_O\_MAGIC（0） | Magic.FILE\_HEADER（0x1350） | Magic.SZ\_LONG |
    |  |  | Magic.SZ\_LONG |
