@@ -28,4 +28,4 @@
    |  |  |  |
 
 6. PhysicalRowIdManager
-
+   分配rowId
