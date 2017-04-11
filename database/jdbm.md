@@ -29,3 +29,5 @@
 
 6. PhysicalRowIdManager
    分配rowId
+        1. PhysicalFreeRowIdManager
+           管理空闲的rowId
