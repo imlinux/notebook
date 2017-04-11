@@ -21,7 +21,7 @@
 
    | 位置 | 值 | 固定记录长度 |
    | :--- | :--- | :--- |
-   | FILE\_HEADER\_O\_MAGIC（0） | Magic.FILE\_HEADER（0x1350） |  |
+   | FILE\_HEADER\_O\_MAGIC（0） | Magic.FILE\_HEADER（0x1350） | Magic.SZ\_LONG |
    |  |  |  |
    |  |  |  |
    |  |  |  |
