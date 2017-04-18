@@ -29,6 +29,8 @@
 2. 在scala中每一个表达式都是有类型的，如`if(x>1) 1 else 0`的类型为Int，又比如`if(x>1) "hello" else 0`的类型为两个分支的公共超类型`any`。
 如果else缺失如：`if(x>1) 1`有可能没有输出，他的类型就是`Unit`可以写作`()`不带else的if语句等同于`if(x>1) 1 else ()`,Unit相当与java中的`void`
 3. scala中没有`switch case`
+4. `{}`在java中表示一个代码块，在scala中`{}`是有值的，块中最后一个表达式的的值就是块的值。
+
 
 
 
