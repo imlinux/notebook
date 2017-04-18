@@ -26,6 +26,7 @@
     ```
     val a = if(100>1) 1 else 0;
     ```
+2. 在scala中每一个表达式都是有类型的，如`if(x>1) 1 else 0`的类型为Int，又比如`if(x>1) "hello" else 0`的类型为两个分支的公共超类型`any`。
 
 
 
