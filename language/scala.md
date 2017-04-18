@@ -27,7 +27,7 @@
     val a = if(100>1) 1 else 0;
     ```
 2. 在scala中每一个表达式都是有类型的，如`if(x>1) 1 else 0`的类型为Int，又比如`if(x>1) "hello" else 0`的类型为两个分支的公共超类型`any`。
-如果else缺失如：`if(x>1) 1`有可能没有输出，他的类型就是`Unit`可以写作`()`不带else的if语句等同于`if(x>1) 1 else ()`
+如果else缺失如：`if(x>1) 1`有可能没有输出，他的类型就是`Unit`可以写作`()`不带else的if语句等同于`if(x>1) 1 else ()`,Unit相当与java中的`void`
 
 
 
