@@ -74,7 +74,12 @@ throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个
 
 #### 数组操作
 1. 基本使用
-`val nums =  new Array[Int](10)`
+```
+    val nums = new Array[Int](10)
+    val nums = Array(1,2,3,4,5)
+    a(0)=1;
+    使用()而不是[]
+```
 
 
 
