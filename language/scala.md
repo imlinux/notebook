@@ -80,7 +80,7 @@ throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个
     a(0)=1;
     使用()而不是[]
 ```
-2. 变长数组，即java中的ArrayList,scala是ArrayBuffer
+2. 链表，即java中的ArrayList,scala是ArrayBuffer
 ```
     import scala.collection.mutable.ArrayBuffer;
     
@@ -94,6 +94,10 @@ throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个
 ```
 
 #### 映射和元组
+1. 基本使用
+```
+    val m1 = Map("a"->1, "b"->2)
+```
 
 
 
