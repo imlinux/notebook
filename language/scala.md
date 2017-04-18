@@ -49,8 +49,12 @@
     def f1(a Int, b Int) {
         a+b
     }
+    或者
+    def f1(a Int, b Int) : Unit = {
+        a + b;
+    }
     ```
-    它类型为Unit
+    它类型为Unit.
 
 
 
