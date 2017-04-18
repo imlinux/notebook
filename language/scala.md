@@ -59,7 +59,17 @@
     
     
 #### 异常
-
+scala中的异常和java中的类似，只是scala中没有受检查的异常类型，
+throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个分支的类型是`Nothing`那么if/else语句的类型即为另一个分支的类型
+如：
+    ```
+        if(x>1){
+            1
+        }else{
+            throw Exception("");
+        }
+        这个分支的类型即为Int
+    ```
 
 
 #### 数组操作
