@@ -73,7 +73,8 @@ throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个
 
 
 #### 数组操作
-
+1. 基本使用
+`val nums =  new Array[Int](10)`
 
 
 
