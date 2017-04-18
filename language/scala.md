@@ -80,6 +80,18 @@ throw表达式的类型为`Nothing` ,在if/else语句中很有用，如果一个
     a(0)=1;
     使用()而不是[]
 ```
+2. 变长数组，即java中的ArrayList,scala是ArrayBuffer
+```
+    import scala.collection.mutable.ArrayBuffer;
+    
+    val b = ArrayBuffer[Int](); 定义一个空的数组
+    b += 1,在末尾添加一个元素1
+    b += (1,2,3,4,5),追加
+    
+    删除操作
+    b.trimEnd(5)
+    移除最后5个元素
+```
 
 
 
