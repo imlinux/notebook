@@ -15,6 +15,11 @@
 1. +,-,*,/,%语义和java中一样，只是这些运算在scala中都是通过方法实现的。所以`a+b`可以写为`a.+(b)`, 同样obj.methodA(param)可以
 写为obj methodA param。
 2. scala不支持++，--操作。
+3. 操作符重载的实例`apply`方法
+如果s是一个字符串，那么在scala中s(i)就是字符串中的第i个字符串，在java中会这样写:s.getCharAt(i)。这种方法就是对`()`进行操作符重载实现的，
+即s(i)与a.apply(i)是等效的。
+
+##### 控制结构
 
 
 
