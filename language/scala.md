@@ -13,6 +13,7 @@
 #### 算数运算和操作符重载
 1. +,-,*,/,%语义和java中一样，只是这些运算在scala中都是通过方法实现的。所以`a+b`可以写为`a.+(b)`, 同样obj.methodA(param)可以
 写为obj methodA param。
+2. scala不支持++，--操作。
 
 
 
