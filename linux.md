@@ -21,7 +21,13 @@ LD_LIBRARY_PATH
 /etc/ld.so.cache  
 default path /lib, and then /usr/lib.
    
-   
+#### 备份/还原 操作系统
+
+1. `sudo dd if=/dev/sdb of=/media/dong/Elements/w7.dd bs=4k conv=notrunc,noerror,sync`
+2. `sudo dd if=w7.dd of=/dev/sdb`
+
+#### 移动/切换home分区
+1. 	`cp -ax /home  /new_home`
 
 
 
