@@ -27,7 +27,7 @@ default path /lib, and then /usr/lib.
 2. `sudo dd if=w7.dd of=/dev/sdb`
 
 #### 移动/切换home分区
-1. 	`cp -ax /home  /new_home`
+1. `cp -ax /home  /new_home`
 
 
 
