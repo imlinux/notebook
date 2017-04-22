@@ -9,7 +9,7 @@
    restrict -6 default kod nomodify notrap nopeer
    ```
    
-#### linux 动态库路径配置（3中方法）
+### linux 动态库路径配置（3中方法）
 1. 在配置文件 /etc/ld.so.conf 中指定动态库搜索路径。每次编辑完该文件后，都必须运行命令 ldconfig 使修改后的配置生效
 2. 通过环境变量 LD_LIBRARY_PATH 指定动态库搜索路径。
 3. 在编译目标代码时指定该程序的动态库搜索路径。
