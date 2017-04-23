@@ -1,5 +1,9 @@
 #### 核心类
-1. KafkaServer: kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
+1. KafkaConfig
+2. LogConfig
+3. KafkaServer: kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
+4. LogManager:
+
 
 
 
