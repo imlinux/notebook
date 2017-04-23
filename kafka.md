@@ -3,6 +3,7 @@
 2. LogConfig
 3. KafkaServer: kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
 4. LogManager: kafka日志个管理子系统， 负责日志的创建，检索，和清理，这些操作实际是是会委托给Log实例.
+5. Log: 
 
 
 
