@@ -29,3 +29,6 @@
 
 #### 环境设置
 
+1. 将rpmbuild的工作目录设置为/home/${user}
+`echo '%_topdir %(echo $HOME)/rpmbuild' > ~/.rpmmacros`
+
