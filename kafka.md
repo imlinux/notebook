@@ -1,6 +1,11 @@
 #### 核心类
 
 ##### KafkaConfig，LogConfig
+##### KafkaServer
+kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
+
+
+
 
 ##### LogManager 
 kafka日志个管理子系统， 负责日志的创建，检索，和清理，这些操作实际是是会委托给Log实例.
@@ -9,9 +14,6 @@ kafka日志个管理子系统， 负责日志的创建，检索，和清理，�
 Log: 维护一个topic的一个分区,有多个LogSeament实现， 持有`segments  ConcurrentNavigableMap[java.lang.Long, LogSegment]`，键为每个每个段在分区中的开始位置。
 
 LogSegment
-
-##### KafkaServer
-kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
 
 
 
