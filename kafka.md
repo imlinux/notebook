@@ -20,6 +20,10 @@ LogSegment
 集群中的每个节点都维护一份相同的MetadataCache，可以加速Topic的元数据查询，如：一个topic的分区的leader在哪个节点上
 
 ##### SocketServer
+线程模型：
+1个Acceptor
+
+1. Selector
 
 #### 功能
 
