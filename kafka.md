@@ -23,7 +23,7 @@ LogSegment
 线程模型：
 1个Acceptor
 
-1. Selector
+1. Selector（kafka自己实现的）  完成异步io操作，包括connection和distinction
 
 #### 功能
 
