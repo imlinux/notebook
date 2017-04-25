@@ -16,10 +16,10 @@ Log: 维护一个topic的一个分区,有多个LogSeament实现， 持有`segmen
 LogSegment
 
 
-
 ##### MetadataCache
 集群中的每个节点都维护一份相同的MetadataCache，可以加速Topic的元数据查询，如：一个topic的分区的leader在哪个节点上
 
+##### SocketServer
 
 #### 功能
 
