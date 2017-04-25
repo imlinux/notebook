@@ -14,6 +14,11 @@ LogSegment
 kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
 
 
+
+##### MetadataCache
+集群中的每个节点都维护一份相同的MetadataCache，可以加速Topic的元数据查询，如：一个topic的分区的leader在哪个节点上
+
+
 #### 功能
 
 1. broker.id
