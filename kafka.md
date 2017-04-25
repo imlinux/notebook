@@ -4,7 +4,7 @@
 2. LogConfig
 3. LogManager: kafka日志个管理子系统， 负责日志的创建，检索，和清理，这些操作实际是是会委托给Log实例.
 主要方法`loadLogs`
-4. Log: 维护一个topic的一个分区, 持有`segments  ConcurrentNavigableMap[java.lang.Long, LogSegment]`
+4. Log: 维护一个topic的一个分区,有多个LogSeament实现， 持有`segments  ConcurrentNavigableMap[java.lang.Long, LogSegment]`，键为每个每个段在分区中的开始位置。
 5. LogSegment:
 
 3. KafkaServer: kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
