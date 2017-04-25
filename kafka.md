@@ -6,6 +6,7 @@
 4. LogManager: kafka日志个管理子系统， 负责日志的创建，检索，和清理，这些操作实际是是会委托给Log实例.
 主要方法`loadLogs`
 5. Log: 维护一个topic的一个分区
+6. LogSegment:
 
 #### 功能
 
