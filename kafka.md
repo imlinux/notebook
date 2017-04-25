@@ -24,6 +24,8 @@ LogSegment
 1个Acceptor
 
 1. Selector（kafka自己实现的）  完成异步io操作，包括connection和distinction
+2. KafkaChannel
+3. RequestChannel
 
 #### 功能
 
