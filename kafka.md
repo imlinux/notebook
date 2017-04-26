@@ -27,6 +27,9 @@ LogSegment
 2. KafkaChannel
 3. RequestChannel
 
+
+##### KafkaApis
+
 #### 功能
 
 1. broker.id
