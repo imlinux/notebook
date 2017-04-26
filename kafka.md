@@ -22,6 +22,8 @@ LogSegment
 ##### SocketServer
 线程模型：
 1个Acceptor
+N个Processor
+M个KafkaRequestHandler
 
 1. Selector（kafka自己实现的）  完成异步io操作，包括connection和distinction
 2. KafkaChannel
