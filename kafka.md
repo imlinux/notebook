@@ -26,7 +26,7 @@ N个Processor  使用kafka封装过的Selector来发送接收数据。接受请�
 M个KafkaRequestHandler 处理请求，然后将响应交给Processor来发出去
 
 1. Selector（kafka自己实现的）  完成异步io操作，包括connection和distinction
-2. KafkaChannel
+2. KafkaChannel 作为数据通道，Processor和KafkaRequestHandler使用KafkaChannel来分发数据
 3. RequestChannel
 
 ##### KafkaApis
