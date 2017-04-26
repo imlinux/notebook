@@ -27,8 +27,11 @@ LogSegment
 2. KafkaChannel
 3. RequestChannel
 
-
 ##### KafkaApis
+
+##### KafkaRequestHandlerPool
+
+
 
 #### 功能
 
