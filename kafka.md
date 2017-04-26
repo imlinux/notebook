@@ -21,7 +21,7 @@ LogSegment
 
 ##### SocketServer
 线程模型：
-1个Acceptor
+1个Acceptor 负责accept连接
 N个Processor
 M个KafkaRequestHandler
 
