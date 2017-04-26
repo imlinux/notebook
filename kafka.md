@@ -29,9 +29,9 @@ M个KafkaRequestHandler 处理请求，然后将响应交给Processor来发出�
 2. KafkaChannel 封装了传输层
 3. RequestChannel作为数据通道，Processor和KafkaRequestHandler使用KafkaChannel来分发请求和响应
 
-##### KafkaApis
 
-##### KafkaRequestHandlerPool
+##### AdminManager
+Topic的创建和删除
 
 
 
