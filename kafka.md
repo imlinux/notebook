@@ -21,9 +21,9 @@ LogSegment
 
 ##### SocketServer
 线程模型：
-1个Acceptor 负责accept连接
-N个Processor
-M个KafkaRequestHandler
+1个Acceptor 负责accept连接,然后将socket分发给Processor
+N个Processor  使用kafka封装过的Selector来发送接收数据。接受请求，然后将请求分发给KafkaRequestHandler，
+M个KafkaRequestHandler 处理请求，然后将响应交给Processor来发出去
 
 1. Selector（kafka自己实现的）  完成异步io操作，包括connection和distinction
 2. KafkaChannel
