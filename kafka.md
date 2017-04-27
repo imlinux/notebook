@@ -37,7 +37,7 @@ Topic的创建和删除
 
 #### kakfa Streaming
 构成有向无环图，分为三种类型的节点:Source(无上游节点)，processor(有上游节点和下游节点)，sink(无下游节点，输出结果).这三种类型的节点的父类都是`ProcessorNode`
-是processor类型节点的默认实现
+是processor类型节点的默认实现。
 
 ###### 低级api
 ####### TopologyBuilder
