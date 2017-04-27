@@ -44,11 +44,12 @@ Topic的创建和删除
 1. QuickUnion
 实现树结构
 2. ProcessorNode
+持有Processor
 3. ProcessorContext
 4. StreamThread
 注意事项：`StreamPartitionAssignor partitionAssignor`字段是在构造方法中的
 `Map<String, Object> consumerConfigs = config.getConsumerConfigs(this, applicationId, threadClientId);`来初始化的
-持有Processor
+5. StreamsMetadataState 其他组件会回调`onChange`来初始化
 
 
 
