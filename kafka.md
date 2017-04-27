@@ -45,6 +45,9 @@ Topic的创建和删除
 实现树结构
 2. ProcessorNode
 3. ProcessorContext
+4. StreamThread
+注意事项：`StreamPartitionAssignor partitionAssignor`字段是在构造方法中的
+`Map<String, Object> consumerConfigs = config.getConsumerConfigs(this, applicationId, threadClientId);`来初始化的
 持有Processor
 
 
