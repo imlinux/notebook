@@ -1,5 +1,5 @@
 #### x相关的组件
-1. display manager   (dm)
+1. display manager   (dm)可以通过`/etc/X11/default-display-manager`修改配置
 2. window manager   (wm)
 3. destop environment    (de)
 
