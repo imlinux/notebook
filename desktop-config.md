@@ -1,6 +1,6 @@
 #### x相关的组件
 1. display manager   (dm)
-对于ubuntu和其衍生版可以通过`/etc/X11/default-display-manager`修改使用哪一个DM
+**对于ubuntu和其衍生版**可以通过`/etc/X11/default-display-manager`修改使用哪一个DM
 2. window manager   (wm)
 3. destop environment    (de)
 
