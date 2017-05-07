@@ -10,6 +10,7 @@
 3. Subscription
 每一个Subscription实例对应一个Subscriber实例
 
+上游通过subscribe方法将Subscription传给下游
 
 
 ## rxJava
@@ -21,3 +22,5 @@
 
 
 #### Flowable操作符
+1. subscribeOn
+指定Subscriber在哪个线程池上运行
