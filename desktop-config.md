@@ -20,6 +20,8 @@
    5. sudo -b vim /etc/fsta
       /swapfile   none   swap   sw   0   0
    6. swapon -s 查看是否启用了swapfile
+
+2. 默认hibernate功能必须使用swap分区来实现。配置内核参数启用hibernate功能 
    
    
 
