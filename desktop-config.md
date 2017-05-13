@@ -23,6 +23,7 @@
 
 2. 默认hibernate功能必须使用swap分区来实现。配置内核参数启用hibernate功能 
    1. 查看跟分区所在的设备，好swapfile的第一个块
+   sudo blkid    ;## get / -> /dev/... -> partition UUID -> resume=UUID=
    sudo filefrag -v /swapfile	;## get first "physical" number -> resume_offset
    1. GRUB_CMDLINE_LINUX_DEFAULT="... resume=UUID=xxxxx resume_offset=xxxx"
    2. sudo update-grub
