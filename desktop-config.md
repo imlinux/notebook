@@ -20,4 +20,6 @@
    5. sudo -b vim /etc/fsta
       /swapfile   none   swap   sw   0   0
    6. swapon -s 查看是否启用了swapfile
+   
+   
 
