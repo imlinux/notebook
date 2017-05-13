@@ -1,7 +1,14 @@
 #### x相关的组件
-1. display manager   (dm)
-**对于ubuntu和其衍生版**可以通过`/etc/X11/default-display-manager`修改使用哪一个DM
-2. window manager   (wm)
-3. destop environment    (de)
 
-1. `/usr/share/xsessions/`让gdm可以识别桌面环境，里面存放了启动桌面环境的命令
+1. display manager   \(dm\)
+   **对于ubuntu和其衍生版**可以通过`/etc/X11/default-display-manager`修改使用哪一个DM
+2. window manager   \(wm\)
+3. destop environment    \(de\)
+
+4. `/usr/share/xsessions/`让gdm可以识别桌面环境，里面存放了启动桌面环境的命令
+
+
+
+
+#### ubuntu 使用swapfile ,设置hibernate，启动hibernate菜单
+
