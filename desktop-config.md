@@ -25,9 +25,9 @@
    1. 查看跟分区所在的设备，好swapfile的第一个块
    sudo blkid    ;## get / -> /dev/... -> partition UUID -> resume=UUID=
    sudo filefrag -v /swapfile	;## get first "physical" number -> resume_offset
-   1. GRUB_CMDLINE_LINUX_DEFAULT="... resume=UUID=xxxxx resume_offset=xxxx"
-   2. sudo update-grub
-   3. sudo update-initramfs -u
+   2. GRUB_CMDLINE_LINUX_DEFAULT="... resume=UUID=xxxxx resume_offset=xxxx"
+   3. sudo update-grub
+   4. sudo update-initramfs -u
    
    
 
