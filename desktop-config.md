@@ -12,3 +12,11 @@
 
 #### ubuntu 使用swapfile ,设置hibernate，启动hibernate菜单
 
+1. 创建swapfile
+   1. sudo dd if=/dev/zero of=/swapfile bs=1024 count=16G
+   2. sudo chmod 600 /swapfile && sudo mkswap /swapfile
+   3. sudo swapoff -a
+   4. sudo swapon /swapfile
+   5. sudo -b vim /etc/fsta
+      /swapfile   none   swap   sw   0   0
+
