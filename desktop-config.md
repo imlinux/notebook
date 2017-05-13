@@ -22,7 +22,7 @@
    6. swapon -s 查看是否启用了swapfile
 
 2. 默认hibernate功能必须使用swap分区来实现。配置内核参数启用hibernate功能 
-   1. GRUB_CMDLINE_LINUX_DEFAULT="... resume=UUID=cdXX--X18 resume_offset=66050"
+   1. GRUB_CMDLINE_LINUX_DEFAULT="... resume=UUID=xxxxx resume_offset=xxxx"
    
    
 
