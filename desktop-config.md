@@ -29,5 +29,7 @@
    3. sudo update-grub
    4. sudo update-initramfs -u
    
+3. 电源管理中启用hibernate选项
+   
    
 
