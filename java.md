@@ -66,7 +66,9 @@ class A extends PhantomReference<Object> {
 具体可以参考H2的org.h2.util.CloseWatcher类
 ```
 
-#### Map
-
-1. 
+ 
+  
+   
+#### 工具
+1. kill -3 javapid  可以dump线程状态 
 
