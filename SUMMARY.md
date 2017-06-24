@@ -27,6 +27,7 @@
   * [Kafka](kafka.md)
   * [oql](oql.md)
   * [RxJava](rxjava.md)
+  * [Jetty](jetty.md)
 * [算法和数据结构](算法和数据结构.md)
 * [软件配置](软件配置.md)
 * [web](web.md)
