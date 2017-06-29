@@ -10,7 +10,7 @@
 3. SelectorManager
 4. ManagedSelector
 
-#### ManagedSelector
+#### SelectorManager/ManagedSelector
 
 
 #### Connection/EndPoint
