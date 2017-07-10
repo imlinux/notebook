@@ -1,4 +1,4 @@
-![](/assets/1.png)## 汇编（nasm/masm）
+## 汇编（nasm/masm）
 
 #### 16位通用寄存器
 + AX
