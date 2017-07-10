@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [汇编（nasm\/masm）](chapter1.md)
+* [汇编](chapter1.md)
 * [内存屏障（）](内存屏障（）.md)
 * [Linux](linux.md)
   * [rpm](rpm.md)
