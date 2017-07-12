@@ -121,7 +121,8 @@ div reg
 
 9. 尽管定义了段，但是，引用某个标号时，该标号处的汇编地址依然是相对与整个程序的开头来计算的，而不是相对于段的起始地址。
  可以使用vstart字句解决这个问题。如下代码
-
+ 
+```
 section data1 align=16  
    p1: mov ax,1  
    section data2 align=16  
