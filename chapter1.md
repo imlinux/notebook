@@ -91,9 +91,9 @@ div reg
 3. 在in和out指令中，只能使用ax或al来存放从端口中读入的数据或要发送到端口中的数据。
 
 4. 例如：
-```
 
-mov dx, 3f8h  
+```
+   mov dx, 3f8h  
    in al, dx ;al用来存放要读入的数据。  
    out dx, al;al用来存放要发送到端口的数据
 ```
