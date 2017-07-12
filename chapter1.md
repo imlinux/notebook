@@ -129,7 +129,7 @@ section data1 align=16
    section data3 align=16  
    p3: mov ax,3
 
-dw p1  
+   dw p1  
    dw p2  
    dw p3
 
