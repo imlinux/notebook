@@ -74,5 +74,5 @@ class A extends PhantomReference<Object> {
 
 
 #### 诊断
-1.  [](http://www.oracle.com/technetwork/java/javase/felog-138657.html#header)
+1.  [hs_err_pid文件定义](http://www.oracle.com/technetwork/java/javase/felog-138657.html#header)
 
