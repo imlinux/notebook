@@ -72,3 +72,7 @@ class A extends PhantomReference<Object> {
 #### 工具
 1. kill -3 javapid  可以dump线程状态 
 
+
+#### 诊断
+1.  [hs_err_pid文件定义](http://www.oracle.com/technetwork/java/javase/felog-138657.html#header)
+
