@@ -40,3 +40,7 @@ f1.go
 	func SayHello() string{
 		return "hello"
 	}
+
+可以认为`package b`就是声明当前源文件的代码属于包b的一部分。
+一般在项目里包就是一个目录，包名就是目录名，包所包含的代码就是目录下面所有源文件的代码。
+import导入时需要指定包的路径
