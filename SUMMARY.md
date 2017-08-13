@@ -45,6 +45,7 @@
   * [Python](language/python.md)
   * [C](language/c.md)
   * [Scala](language/scala.md)
+  * [go](language/go.md)
 * [Cache替换算法](cache.md)
 * [Markdown](markdown.md)
 
