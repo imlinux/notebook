@@ -188,6 +188,22 @@ Go 只有一种循环结构—— for 循环。
 		fmt.Printf("%s.", os)
 	}
 switch 的条件从上到下的执行，当匹配成功的时候停止。
+
+没有条件的 switch 同 switch true 一样。
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+	
+##### defer
+
+
+
 ##### 复合类型
 1. 指针
 2. 数组, go中数组为值类型， 所以在赋值时会产生一次复制。
