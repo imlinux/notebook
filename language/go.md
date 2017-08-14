@@ -79,6 +79,19 @@ iota比较特殊， 在每一个const关键字出现时就被重置为0， 然�
 		c5 = iota // iota为2
 	)
 
+#### 枚举
+
+	const (
+		Sunday = iota
+		Monday
+		Tuesday
+		Wednesday
+		Thursday
+		Friday
+		Saturday
+		numberOfDays
+		 // 这个常量没有导出
+	)
 
 
 
