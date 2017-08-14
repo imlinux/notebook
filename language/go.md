@@ -64,3 +64,21 @@ import导入时需要指定包的路径
 #### 常量
 1. 字面常量，和其他编程语言类似
 2. `const u = 0`;
+3. 预定义常量`true, false, iota`
+iota比较特殊， 在每一个const关键字出现时就被重置为0， 然后在下一个const出现之前每使用一次iota就加1
+
+	const (
+		c0 = iota  // iota为0
+		c1 = iota  // iota为1
+		c2 = iota  // iota为2
+	)
+	
+	const (
+		c3 = iota // iota为0
+		c4 = iota // iota为1
+		c5 = iota // iota为2
+	)
+
+
+
+
