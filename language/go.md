@@ -1,3 +1,6 @@
+#### 开发工具
+IDE: goeclipse
+
 #### HelloWord
 
 	package main
