@@ -107,6 +107,9 @@ go不支持关键字enum，而是使用const来实现枚举
 
 ##### 类型转换
 表达式 T(v) 将值 v 转换为类型 T 
+	var i int = 42
+	var f float64 = float64(i)
+	var u uint = uint(f)
 ##### 复合类型
 1. 指针
 2. 数组, go中数组为值类型， 所以在赋值时会产生一次复制。
