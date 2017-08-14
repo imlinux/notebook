@@ -102,7 +102,7 @@ go不支持关键字enum，而是使用const来实现枚举
 其中int, uint, uintptr的长度与平台相关
 4. complex64、complex128 复数类型
 5. string
-6. rune 字符类型
+6. rune 字符类型, Unicode字符
 7. error 错误类型
 ##### 复合类型
 1. 指针
