@@ -165,6 +165,17 @@ Go 只有一种循环结构—— for 循环。
 	} else {
 	
 	}
+	
+	
+##### if/else if/else
+
+	if i:= 10; i < 10 {
+		fmt.Print("i < 10")
+	} else i < 70 {
+		fmt.Print("i < 70")
+	} else {
+		fmt.Print("i");
+	}
 
 ##### 复合类型
 1. 指针
