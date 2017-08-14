@@ -54,5 +54,5 @@ import导入时需要指定包的路径
 	var v2 string
 	var v3 [10]int
 	var v4 int = 1
-	var v5 = 1
-	   v6 := 1
+	var v5 = 1 // 可以不加类型，编译器会自动推导出类型
+	   v6 := 1 // 简洁方式
