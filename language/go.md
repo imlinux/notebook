@@ -92,6 +92,7 @@ iota比较特殊， 在每一个const关键字出现时就被重置为0， 然�
 		numberOfDays
 		 // 这个常量没有导出
 	)
+go不支持关键字enum，而是使用const来实现枚举
 
 
 
