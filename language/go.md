@@ -157,7 +157,7 @@ Go 只有一种循环结构—— for 循环。
 	}
 跟 for 一样， if 语句可以在条件之前执行一个简单语句。
 	if v := math.Pow(x, n); v < lim {
-		return v
+		fmt.Println("hello");
 	}
 
 ##### 复合类型
