@@ -176,6 +176,17 @@ Go 只有一种循环结构—— for 循环。
 	} else {
 		fmt.Print("i");
 	}
+##### switch
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux.")
+	default:
+		// freebsd, openbsd,
+		// plan9, windows...
+		fmt.Printf("%s.", os)
+	}
 
 ##### 复合类型
 1. 指针
