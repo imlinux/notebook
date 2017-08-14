@@ -201,7 +201,15 @@ switch 的条件从上到下的执行，当匹配成功的时候停止。
 	}
 	
 ##### defer
-
+defer 语句会延迟函数的执行直到上层函数返回。
+延迟调用的参数会立刻生成，但是在上层函数返回前函数都不会被调用。
+	import "fmt"
+	
+	func main() {
+		defer fmt.Println("world")
+	
+		fmt.Println("hello")
+	}
 
 
 ##### 复合类型
