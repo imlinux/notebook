@@ -98,15 +98,15 @@ go不支持关键字enum，而是使用const来实现枚举
 ##### 基本类型
 1. bool
 2. float32、float64
-3. int8、uint8, int16, uint16, int32, uint32, int64, uint64, byte、int、uint、uintptr
+3. int8、uint8, int16, uint16, int32, uint32, int64, uint64, byte（uint8的别名）、int、uint、uintptr
 其中int, uint, uintptr的长度与平台相关
 4. complex64、complex128 复数类型
 5. string
-6. rune 字符类型, Unicode字符
+6. rune 字符类型, int32的别名， 代表一个Unicode码
 7. error 错误类型
 ##### 复合类型
 1. 指针
-2. 数组, go中数组为值类型， 所以在赋值时会产生一次复制
+2. 数组, go中数组为值类型， 所以在赋值时会产生一次复制。
 3. 切片
 4. 字典
 5. 通道
