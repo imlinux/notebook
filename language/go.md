@@ -58,7 +58,13 @@ import导入时需要指定包的路径
 	func swap(x, y string) (string, string) {
 		return y, x
 	}
-
+	命名返回值
+	func split(sum int) (x, y int) {
+		x = sum * 4 / 9
+		y = sum - x
+		return
+	}
+直接返回语句仅应当用在像下面这样的短函数中。在长的函数中它们会影响代码的可读性。
 
 #### 变量
 
