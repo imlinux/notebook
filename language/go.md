@@ -159,6 +159,12 @@ Go 只有一种循环结构—— for 循环。
 	if v := math.Pow(x, n); v < lim {
 		fmt.Println("hello");
 	}
+##### if/else
+	if x < 0{
+	
+	} else {
+	
+	}
 
 ##### 复合类型
 1. 指针
