@@ -53,6 +53,12 @@ import导入时需要指定包的路径
 	func add(x int, y int) int {
 		return x + y
 	}
+	
+	多值返回
+	func swap(x, y string) (string, string) {
+		return y, x
+	}
+
 
 #### 变量
 
