@@ -98,7 +98,8 @@ go不支持关键字enum，而是使用const来实现枚举
 ##### 基本类型
 1. bool
 2. float32、float64
-3. int8、byte、int16、int、uint、uintptr
+3. int8、uint8, int16, uint16, int32, uint32, int64, uint64, byte、int、uint、uintptr
+其中int, uint, uintptr的长度与平台相关
 4. complex64、complex128 复数类型
 5. string
 6. rune 字符类型
