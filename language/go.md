@@ -237,7 +237,10 @@ len(s) 返回slice s的长度
 
 	初始化
 	s := []int{2, 3, 5, 7, 11, 13}
-	对 slice 切片s[lo:hi]
+	对 slice 切片
+	s[lo:hi]
+	构造slice
+	a := make([]int, 5)
 	
 4. 字典
 5. 通道
