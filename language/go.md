@@ -231,6 +231,7 @@ defer 栈
 类型 [n]T 是一个有 n 个类型为 T 的值的数组。
 go中数组为值类型， 所以在赋值时会产生一次复制。
 3. 切片(slice)
+slice可以认为是java中的list
 []T 是一个元素类型为 T 的 slice。
 len(s) 返回slice s的长度
 
