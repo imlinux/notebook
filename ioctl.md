@@ -1,4 +1,4 @@
 
 
 #### 网卡
-1. man 7 netdevice
+1. man 7 netdevice, 主要是ifconfig在使用
