@@ -23,6 +23,7 @@
 2. [max-rpm](http://rpm.org/max-rpm-snapshot/)
 3. [红帽rpm文档](https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/index.html)
 4. [常用指令博客](https://app.yinxiang.com/shard/s59/nl/12200770/2d59215f-0b2a-462e-9d76-5ff2c0e70cb2/)
+5. [wireark rpm打包](https://github.com/wireshark/wireshark/tree/master/packaging/rpm/SPECS)
 
 
 
