@@ -11,6 +11,7 @@
   * [Desktop Config](desktop-config.md)
   * [LFS](lfs.md)
   * [vim](vim.md)
+  * [ioctl](ioctl.md)
 * [shell](shell.md)
   * [常用变量和特殊符号](常用变量.md)
 * [JAVA](java.md)
