@@ -58,6 +58,7 @@ ResultActive=yes
 2. [Add a Binary Payload to your Shell Scripts _ Linux Journal](assets/pdf/Add a Binary Payload to your Shell Scripts _ Linux Journal.pdf)
 3. [Understanding the Load Average on Linux and Other Unix-like Systems](assets/pdf/Understanding the Load Average on Linux and Other Unix-like Systems.pdf)
 4. [用grub2引导ISO硬盘安装ubuntu方法两则和利用memdisk引导WinPE](assets/pdf/用grub2引导ISO硬盘安装ubuntu方法两则和利用memdisk引导WinPE.pdf)
+5. [grub rescue模式下修复](assets/pdf/grub rescue模式下修复.pdf)
 
 
    
