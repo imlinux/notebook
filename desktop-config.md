@@ -46,7 +46,7 @@ ResultActive=yes
 ```
 
 #### 配置字体
-2. {% pdf src="assets/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf" %}{% endpdf %}
+2. {% pdf width="100%", height="850", src="assets/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf" %}{% endpdf %}
 
    
    
