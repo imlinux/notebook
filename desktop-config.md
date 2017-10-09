@@ -44,6 +44,10 @@ Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.handle-hibernate-
 ResultActive=yes
 
 ```
+
+#### 配置字体
+2. {% pdf src="assets/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf" %}{% endpdf %}
+
    
    
 
