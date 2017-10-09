@@ -53,6 +53,11 @@ ResultActive=yes
 2. 选择recovery mode， 按e键进入编辑界面
 3. 将 ro recovery nomodeset 改为 rw single init=/bin/bash如下图，修改完ctrl+x启动单用户模式
 
+#### 制作自包含的shell脚本，如dbvis.sh,将所有的二进制信息追加到了shell脚本中
+{% pdf width="100%", height="1024", src="assets/Understanding the Load Average on Linux and Other Unix-like Systems.pdf" %}{% endpdf %}
+
+[你好](assets/Understanding the Load Average on Linux and Other Unix-like Systems.pdf)
+
 
    
    
