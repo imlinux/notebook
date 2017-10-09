@@ -1,3 +1,4 @@
 {
-    "pluginsConfig": {}
+    "pluginsConfig": {},
+    "plugins": ["embed-pdf"]
 }
