@@ -54,8 +54,8 @@ ResultActive=yes
 
 
 #### pdf教程
-1. [配置字体](assets/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf)
-2. [制作自包含的shell脚本，如dbvis.sh,将所有的二进制信息追加到了shell脚本中](assets/Understanding the Load Average on Linux and Other Unix-like Systems.pdf)
+1. [配置字体](assets/pdf/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf)
+2. [制作自包含的shell脚本，如dbvis.sh,将所有的二进制信息追加到了shell脚本中](assets/pdf/Understanding the Load Average on Linux and Other Unix-like Systems.pdf)
 
 
    
