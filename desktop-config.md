@@ -48,6 +48,12 @@ ResultActive=yes
 #### 配置字体
 2. {% pdf width="100%", height="1024", src="assets/Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu _ Linux blog.pdf" %}{% endpdf %}
 
+#### 进入单用户模式
+1. 开机按住shift进入grub界面
+2. 选择recovery mode， 按e键进入编辑界面
+3. 将 ro recovery nomodeset 改为 rw single init=/bin/bash如下图，修改完ctrl+x启动单用户模式
+
+
    
    
 
