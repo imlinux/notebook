@@ -1,1 +1,1 @@
-![](/assets/vi.jpg)
+![](/assets/image/vi.jpg)

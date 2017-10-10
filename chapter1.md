@@ -41,7 +41,7 @@
 
 * IP 指令指针寄存器， 它只和CS寄存器一起使用，CS和IP共同形成指令的逻辑地址
 
-![](/assets/1.png)
+![](/assets/image/1.png)
 
 #### mov指令
 
