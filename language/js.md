@@ -7,4 +7,4 @@
 
 
 #### 工具
-1. (js代码质量工具)[https://github.com/douglascrockford/JSLint]
+1. [js代码质量工具](https://github.com/douglascrockford/JSLint)
