@@ -47,6 +47,7 @@
   * [C](language/c.md)
   * [Scala](language/scala.md)
   * [go](language/go.md)
+  * [js](language/js.md)
 * [Cache替换算法](cache.md)
 * [Markdown](markdown.md)
 * [gitbook教程](gitbookjiao-cheng.md)
