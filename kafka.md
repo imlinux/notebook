@@ -1,6 +1,6 @@
 #### 核心类
 
-##### KafkaConfig，LogConfig
+##### KafkaConfig(不错的开发实践，开发自己的程序时可以参考)，LogConfig
 ##### KafkaServer
 kafka的入口，持有所有组件实例,如：kafkaScheduler线程池，zkUtils，LogManager，SocketServer
 
