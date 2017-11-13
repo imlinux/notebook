@@ -1,3 +1,8 @@
+#### 入口类
+kafka.Kafka
+
+
+
 #### 核心类
 
 ##### KafkaConfig(不错的开发实践，开发自己的程序时可以参考)，LogConfig
