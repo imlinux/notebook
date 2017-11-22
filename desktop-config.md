@@ -61,6 +61,11 @@ ResultActive=yes
 5. [grub rescue模式下修复](assets/pdf/grub rescue模式下修复.pdf)
 
 
+
+#### 文档
+1. [ubuntu 包管理](https://help.ubuntu.com/lts/serverguide/dpkg.html)
+
+
    
    
 
