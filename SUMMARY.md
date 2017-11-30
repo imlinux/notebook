@@ -31,6 +31,8 @@
   * [RxJava](rxjava.md)
   * [Jetty](jetty.md)
   * [字符编码](zi-fu-bian-ma.md)
+* [c/cpp](ccpp.md)
+  * [clickhouse](ccpp/clickhouse.md)
 * [算法和数据结构](算法和数据结构.md)
 * [软件配置](软件配置.md)
 * [web](web.md)
@@ -52,6 +54,6 @@
 * [Cache替换算法](cache.md)
 * [Markdown](markdown.md)
 * [gitbook教程](gitbookjiao-cheng.md)
-* [工具](gong-ju.md)
+* c/cpp
 * [衣着](yi-zhao.md)
 
