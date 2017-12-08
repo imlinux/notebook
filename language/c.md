@@ -1,7 +1,7 @@
 ### 工具
 
-####Autotools
-####cmake
+1. Autotools
+2. cmake
 
 ### wait,waitpid
 
