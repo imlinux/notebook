@@ -1,6 +1,6 @@
 ### 工具
 
-#### GNU构建系统
+####Autotools
 ####cmake
 
 ### wait,waitpid
