@@ -1,3 +1,7 @@
+#### 主要源码文件
+dbms/src/Server/Server.cpp,数据库的入口
+
+
 #### 接口
 1. IDatabase.h
 默认使用DatabaseOrdinary.h
