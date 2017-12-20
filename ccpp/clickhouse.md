@@ -3,6 +3,12 @@ dbms/src/Server/Server.cpp#main,数据库的入口
 dbms/src/Interpreters/executeQuery.cpp#executeQuery执行sql的入口
 
 
+#### 调用流程
+dbms/src/Server/HTTPHandler.cpp#processQuery
+    dbms/src/Interpreters/executeQuery.cpp#executeQuery
+        dbms/src/Interpreters/executeQuery.cpp#executeQueryImpl//executeQueryImpl(begin, end, context, false, QueryProcessingStage::Complete);    
+
+
 #### 接口
 1. IDatabase.h
 默认使用DatabaseOrdinary.h
