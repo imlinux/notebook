@@ -1,5 +1,6 @@
 #### 主要源码文件
-dbms/src/Server/Server.cpp,数据库的入口
+dbms/src/Server/Server.cpp#main,数据库的入口
+dbms/src/Interpreters/executeQuery.cpp#executeQueryImpl执行sql的入口
 
 
 #### 接口
