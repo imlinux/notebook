@@ -6,7 +6,7 @@
 
 
 #### SQL解释
-Lexer扫描输入文本为Tokens, Parser将Tokens解析为Ast，解释器使用Ast生成执行流
+Lexer扫描输入文本为Tokens, Parser将Tokens解析为Ast，解释器(Interpreter)使用Ast生成执行流
 
 ##### Token
 Token有三个字段，分别为begin, end, type， begin和end分别代表字符串的开始和结束
