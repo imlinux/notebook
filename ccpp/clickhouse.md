@@ -15,7 +15,7 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 1. IDatabase.h
 默认使用DatabaseOrdinary.h
 2. IStorage代表一个表
-3. Block
+3. Block容器，包含多个列数据以及对应的元数据
 
 
 
