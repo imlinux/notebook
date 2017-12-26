@@ -11,10 +11,11 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
                    
 
 
-#### 接口
+#### 接口/实现
 1. IDatabase.h
 默认使用DatabaseOrdinary.h
 2. IStorage代表一个表
+3. Block
 
 
 
