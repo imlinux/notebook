@@ -17,6 +17,7 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 2. IStorage代表一个表
 3. Block容器，包含多个列数据以及对应的元数据
 4. IBlockInputStream/IBlockOutputStream输入或输出的单元为Block
+5. DatabaseFactory创建数据库对象
 
 
 
