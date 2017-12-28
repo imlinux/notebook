@@ -12,6 +12,7 @@
   * [LFS](lfs.md)
   * [vim](vim.md)
   * [ioctl](ioctl.md)
+  * [system\_call](systemcall.md)
 * [shell](shell.md)
   * [常用变量和特殊符号](常用变量.md)
 * [JAVA](java.md)
