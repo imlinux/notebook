@@ -35,6 +35,7 @@
   * [JVM源码阅读](jvmyuan-ma-yue-du.md)
 * [c/cpp](ccpp.md)
   * [clickhouse](ccpp/clickhouse.md)
+  * [C](ccpp/c.md)
 * [算法和数据结构](算法和数据结构.md)
 * [软件配置](软件配置.md)
 * [web](web.md)
