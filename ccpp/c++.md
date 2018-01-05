@@ -19,3 +19,21 @@ if(in.is_open())
     }
 }
 ```
+上面的方式是先读取一次文件载判断读取是否正常。
+也可以将上面的代码简化为
+```
+ifstream in(filename);
+if(in.is_open())
+{
+    char c;
+    while((in >> c))
+    {
+        cout << c;
+        in >> c;
+    }
+}
+
+```
+操作符`>>`返回ifstream自己，ifstream重载了bool操作符调用good方法
+所以`while((in >> c))` 可以实际做了两步操作
+第一步调用`>>`第二步调用`good`
