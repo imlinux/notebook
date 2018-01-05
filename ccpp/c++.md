@@ -59,3 +59,7 @@ struct Data
 const Data data = {"hello", 0};
 data.access++;
 ```
+
+
+#### c++智能指针
+1. (智能指针简单剖析)[ReadingNotes/C++读书笔记/C++智能指针简单剖析.md]
