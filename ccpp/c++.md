@@ -90,6 +90,7 @@ data.access++;
  private:
      int i;
  public:
+     //定义转换为int的方法
      operator int()
      {
          return i;
