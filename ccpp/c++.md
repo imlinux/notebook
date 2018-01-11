@@ -81,6 +81,21 @@ data.access++;
  ```
  explicit A(int i)
  ```
+ 3. 转换函数
+ 可以将类类型转换为标准类型
+ 如：
+ ```
+ class A
+ {
+ private:
+     int i;
+ public:
+     operator int()
+     {
+         return i;
+     }
+ }
+ ```
 2. 
 2. 强制类型转换
 
