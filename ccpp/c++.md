@@ -77,6 +77,10 @@ data.access++;
  };
  A a = 100;
  ```
+ 如果想禁用这中自动转换可以使用关键字`explicit`
+ ```
+ explicit A(int i)
+ ```
 2. 
 2. 强制类型转换
 
