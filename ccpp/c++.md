@@ -77,7 +77,7 @@ data.access++;
  };
  A a = 100;
  ```
- 如果想禁用这中自动转换可以使用关键字`explicit`
+ 如果想禁用这中自动转换可以使用关键字`explicit`, 但是仍可以强行转换
  ```
  explicit A(int i)
  ```
