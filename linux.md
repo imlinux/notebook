@@ -1,3 +1,6 @@
+### Linux各个发行版的信息
+[Linux各个发行版的信息](https://distrowatch.com/)
+
 ### 配置ntp服务
 
 1. 服务端配置
