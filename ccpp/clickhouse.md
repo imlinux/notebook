@@ -20,6 +20,15 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 5. DatabaseFactory创建数据库对象
 6. IColumn 保存列数据与IDataType配合使用，IDataType负责将IColumn中的数据序列话到文件中或将文件中的数据反序列化到IColumn中
 
+#### Storage
+读写以`Block`为单位
+##### StorageLog
+1. __marks.mrk文件
+因为目前没有null类型所以写入的时候所有的列要有数据。
+每写入一个Block都会依次记录每一列的`Mark`信息。
+
+
+
 
 
 #### SQL解释
