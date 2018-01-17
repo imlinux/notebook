@@ -16,7 +16,7 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 默认使用DatabaseOrdinary.h
 2. IStorage代表一个表
 3. Block容器，包含多个列数据以及对应的元数据
-4. IBlockInputStream/IBlockOutputStream输入或输出的单元为Block
+4. IBlockInputStream/IBlockOutputStream输入或输出的单元为Block，换句话说就是每调用一次read/write的输入或输出都是Block
 5. DatabaseFactory创建数据库对象
 6. IColumn 保存列数据与IDataType配合使用，IDataType负责将IColumn中的数据序列话到文件中或将文件中的数据反序列化到IColumn中
 
