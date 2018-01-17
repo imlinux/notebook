@@ -18,6 +18,7 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 3. Block容器，包含多个列数据以及对应的元数据
 4. IBlockInputStream/IBlockOutputStream输入或输出的单元为Block
 5. DatabaseFactory创建数据库对象
+6. IColumn 保存列数据与IDataType配合使用，IDataType负责将IColumn中的数据序列话到文件中或将文件中的数据反序列化到IColumn中
 
 
 
