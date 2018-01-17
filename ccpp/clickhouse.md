@@ -26,6 +26,16 @@ dbms/src/Server/HTTPHandler.cpp#processQuery
 1. __marks.mrk文件
 因为目前没有null类型所以写入的时候所有的列要有数据。
 每写入一个Block都会依次记录每一列的`Mark`信息。
+所以mrk文件用来记录`Block`在个各个列文件中的偏移地址和这个`Block`有多少行
+
+```
+struct Mark
+{
+    size_t rows;    /// How many lines are contained in this set and all previous ones.
+    size_t offset;  /// The offset to the set in the compressed file.
+};
+```
+
 
 
 
