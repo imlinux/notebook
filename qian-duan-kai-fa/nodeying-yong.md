@@ -28,3 +28,4 @@ npm类似与maven,npm使用package.json来描述项目与maven的pom.xml类似
   }
 }
 ```
+2. npm install 包名，会将依赖的包下载到项目里，同时会在dependencies中添加
