@@ -1,3 +1,5 @@
 ### 工具
 1. node 运行代码
-2. npm  依赖管理， 打包，等等。类似于java的maven。package.json 描述项目，类似maven的pom.xml
+2. npm  项目管理
+
+#### npm的使用
