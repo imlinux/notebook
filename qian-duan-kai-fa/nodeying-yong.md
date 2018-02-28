@@ -29,3 +29,4 @@ npm类似与maven,npm使用package.json来描述项目与maven的pom.xml类似
 }
 ```
 2. npm install 包名，会将依赖的包下载到项目里，同时会在dependencies中添加
+3. npm install --save-dev 包名，与npm install 的区别是它将依赖的包信息加在dependencies
