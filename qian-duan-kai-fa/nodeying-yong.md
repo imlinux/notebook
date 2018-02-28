@@ -5,5 +5,5 @@
 #### npm的使用
 npm类似与maven,npm使用package.json来描述项目与maven的pom.xml类似
 构建一个项目的步骤
-1. npm init
+1. npm init 生成package.json
 2. 
