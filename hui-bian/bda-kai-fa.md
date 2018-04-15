@@ -2,7 +2,9 @@
 
 ## Pfring
 
-1. 
+1. pf\_ring模块实现linux内核的socket接口
+2. pfring\_lib封装socket操作简化使用
+
 ## JPfring
 
 1. 减少jni api的使用，换用Unsafe来访问c结构体。
