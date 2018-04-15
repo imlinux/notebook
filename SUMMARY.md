@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [汇编](hui-bian/README.md)
-  * [Bda开发](hui-bian/bda-kai-fa.md)
+* [Bda开发](bda-kai-fa.md)
+* [汇编](hui-bian.md)
 * [内存屏障](nei-cun-ping-zhang.md)
 * [Linux](linux/README.md)
   * [rpm](linux/rpm.md)
