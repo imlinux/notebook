@@ -16,5 +16,6 @@
 #### java中gc的实现
 
 ![](/assets/image/java_gc.png)
+**?** 代表g1垃圾回收实现
 
 
