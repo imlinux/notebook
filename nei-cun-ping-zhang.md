@@ -1,0 +1,4 @@
+# 内存屏障
+
+读写屏障包括全能型屏障都属于指令。读屏障作用于Invalidate queue，每次cpu遇到这个指令都将自己积压已久的invalidate ack处理掉，具体就是使得对应的缓存失效，这样自己再读的时候，能保证读到最新的副本。写屏障作用于store buffer，将处于store buffer中的写操作真正执行掉，具体就是向其他CPU发送invalidate cache 的消息，写自己的独占缓存。全能型屏障这两件事都做。
+

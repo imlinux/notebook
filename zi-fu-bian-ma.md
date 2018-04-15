@@ -1,8 +1,0 @@
-#### Unicode
-1. unicode使用16进制表示一个字符，例如0x0041代表‘A’。最初unicode使用16bit来编码字符，因为当时的计算机是16bit的。
-2. java语言被开发出来时使用的就是16bit的unicode,即范围为 0x0000-0xFFFF的字符
-3. 因为16bit只能代表65536个字符，不能表示世界上所有的字符，后来unicode被扩展到0x10FFFF，但是java语言不能跟这扩展，因为这回使很多java程序不能工作，为了
-解决这个问题，想出一个解决方法就是将那些在0x10000-0x10FFFF之间的字符叫做补充字符，使用4个字节来表示。
-4. 因此java的char不能包含unicode所有的字符，应避免使用，例如：‘\u10400’在java中的char是不能表示的而是用"\uD801\uDC00"来表示
-5. [参考文档](https://docs.oracle.com/javase/tutorial/i18n/text/unicode.html)
-6. [转换为unicode](https://stackoverflow.com/questions/5733931/java-string-unicode-value)

@@ -1,6 +1,4 @@
-### 常用sql
+# vertica
 
-1. purge_table;
-
-
+1. purge\_table;
 
