@@ -17,3 +17,12 @@
 
  **?** 代表g1垃圾回收实现
 
+
+## gc调节策略
+
+1. 
+
+-XX:MaxGCPauseMillis=n
+-XX:GCTimeRatio
+
+
