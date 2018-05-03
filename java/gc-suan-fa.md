@@ -15,14 +15,9 @@
 
 ![](../.gitbook/assets/java_gc.png)
 
- **?** 代表g1垃圾回收实现
-
+**?** 代表g1垃圾回收实现
 
 ## gc调节策略
 
-1. 
-
--XX:MaxGCPauseMillis=n
--XX:GCTimeRatio
-
+1. -XX:MaxGCPauseMillis=n -XX:GCTimeRatio
 
