@@ -203,7 +203,7 @@ done
 
 ## \`
 
-命令替换符。```command` ``结构可以使得命令的输出结果赋值给一个变量。通常也称作后引号（backquotes）或反引号（backticks）。
+命令替换符。```command``` 结构可以使得命令的输出结果赋值给一个变量。通常也称作后引号（backquotes）或反引号（backticks）。
 
 ## :
 

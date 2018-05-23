@@ -36,7 +36,7 @@ ResultActive=yes
 
 ## pdf教程
 
-1. [Better Font Rendering In Linux With Infinality _ Web Upd8_ Ubuntu \_ Linux blog](https://github.com/imlinux/notebook/tree/ee838cf4dc2c3fb021798b689c408356e35ee99e/assets/pdf/Better%20Font%20Rendering%20In%20Linux%20With%20Infinality%20_%20Web%20Upd8_%20Ubuntu%20_%20Linux%20blog.pdf)
+1. [Better Font Rendering In Linux With Infinality  _Web Upd8_ Ubuntu \_ Linux blog](https://github.com/imlinux/notebook/tree/ee838cf4dc2c3fb021798b689c408356e35ee99e/assets/pdf/Better%20Font%20Rendering%20In%20Linux%20With%20Infinality%20_%20Web%20Upd8_%20Ubuntu%20_%20Linux%20blog.pdf)
 2. [Add a Binary Payload to your Shell Scripts \_ Linux Journal](https://github.com/imlinux/notebook/tree/ee838cf4dc2c3fb021798b689c408356e35ee99e/assets/pdf/Add%20a%20Binary%20Payload%20to%20your%20Shell%20Scripts%20_%20Linux%20Journal.pdf)
 3. [Understanding the Load Average on Linux and Other Unix-like Systems](https://github.com/imlinux/notebook/tree/ee838cf4dc2c3fb021798b689c408356e35ee99e/assets/pdf/Understanding%20the%20Load%20Average%20on%20Linux%20and%20Other%20Unix-like%20Systems.pdf)
 4. [用grub2引导ISO硬盘安装ubuntu方法两则和利用memdisk引导WinPE](https://github.com/imlinux/notebook/tree/ee838cf4dc2c3fb021798b689c408356e35ee99e/assets/pdf/用grub2引导ISO硬盘安装ubuntu方法两则和利用memdisk引导WinPE.pdf)
