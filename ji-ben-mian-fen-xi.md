@@ -9,5 +9,6 @@
     * [**应收账款周转天数**](http://wiki.mbalib.com/wiki/%E5%BA%94%E6%94%B6%E8%B4%A6%E6%AC%BE%E5%91%A8%E8%BD%AC%E5%A4%A9%E6%95%B0)
     * [**应收账款周转率**](http://wiki.mbalib.com/wiki/%E5%BA%94%E6%94%B6%E8%B4%A6%E6%AC%BE%E5%91%A8%E8%BD%AC%E7%8E%87)
   * 现金 及其 等价物 和 短期 投资
-  * [存货周转率](http://wiki.mbalib.com/wiki/%E5%AD%98%E8%B4%A7%E5%91%A8%E8%BD%AC%E7%8E%87)
+  * 存货
+    * [存货周转率](http://wiki.mbalib.com/wiki/%E5%AD%98%E8%B4%A7%E5%91%A8%E8%BD%AC%E7%8E%87)
 
