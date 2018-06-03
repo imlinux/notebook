@@ -25,8 +25,14 @@
 
 * [营业总收入](http://wiki.mbalib.com/zh-tw/%E8%90%A5%E4%B8%9A%E6%94%B6%E5%85%A5)
 * 营业总成本
-  * [销售费用](http://wiki.mbalib.com/wiki/%E9%94%80%E5%94%AE%E8%B4%B9%E7%94%A8)\(营业费用\)
-  * 管理费用
+  * [销售费用\(营业费用\)](http://wiki.mbalib.com/wiki/%E9%94%80%E5%94%AE%E8%B4%B9%E7%94%A8)
+  * [管理费用](http://wiki.mbalib.com/wiki/%E7%AE%A1%E7%90%86%E8%B4%B9%E7%94%A8)
+* [营业利润](http://wiki.mbalib.com/wiki/%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6)
+
+### 现金流表
+
+### 财务指标
+
 * 毛利
   * 营业总收入减去营业总成本
 
