@@ -34,7 +34,7 @@
   * [Jetty](java/jetty.md)
   * [字符编码](java/zi-fu-bian-ma.md)
   * [JVM源码阅读](java/jvm-yuan-ma-yue-du.md)
-  * 性能测试
+  * [性能测试](java/xing-neng-ce-shi.md)
   * [java程序线上诊断](java/java-cheng-xu-xian-shang-zhen-duan.md)
 * [c/cpp](c-cpp/README.md)
   * [clickhouse](c-cpp/clickhouse.md)
