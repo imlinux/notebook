@@ -20,11 +20,45 @@
 2. 安装m2eclipse-scala插件\(maven\)
 3. 插入pom片段
 
-   net.alchim31.mavenscala-maven-plugin3.1.3compiletestCompile
+
+
+   ```text
+   <plugin>
+    	<groupId>net.alchim31.maven</groupId>
+    	<artifactId>scala-maven-plugin</artifactId>
+    	<version>3.1.3</version>
+    	<executions>
+    		<execution>
+    			<goals>
+    				<goal>compile</goal>
+    				<goal>testCompile</goal>
+    			</goals>
+    		</execution>
+    	</executions>
+    </plugin> 
+   ```
 
 4. eclipse可能会报错，在 window-&gt;preferences-&gt;maven-&gt;lifecyle mapping ,填入下列代码
 
-   org.scala-toolsmaven-scala-plugintestCompileadd-sourcecompile\[2.9.1,\)
+
+
+   ```text
+   <pluginExecution>
+    	<pluginExecutionFilter>
+    		<groupId>org.scala-tools</groupId>
+    		<artifactId>maven-scala-plugin</artifactId>
+    		<goals>
+    			<goal>testCompile</goal>
+    			<goal>add-source</goal>
+    			<goal>compile</goal>
+    		</goals>
+    		<versionRange>[2.9.1,)</versionRange>
+    	</pluginExecutionFilter>
+    	<action>
+    		<ignore />
+    	</action>
+    </pluginExecution>
+   ```
 
 ## 备忘
 
