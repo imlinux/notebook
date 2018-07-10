@@ -318,3 +318,7 @@ my_list = pickle.load(my_file);
 
 ## Python3与python2.7的差异
 
+### 工具
+
+反编译工具uncompyle6，`sudo pip install uncompyle6`
+
