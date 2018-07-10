@@ -37,6 +37,7 @@
   * [JVM源码阅读](java/jvm-yuan-ma-yue-du.md)
   * [性能测试](java/xing-neng-ce-shi.md)
   * [java程序线上诊断](java/java-cheng-xu-xian-shang-zhen-duan.md)
+  * [maven](java/maven.md)
 * [c/cpp](c-cpp/README.md)
   * [clickhouse](c-cpp/clickhouse.md)
   * [C](c-cpp/c.md)
