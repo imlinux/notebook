@@ -29,6 +29,7 @@
 1. HttpServletBean
 2. FrameworkServlet
 3. DispatcherServlet
+
 DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的DispatcherServlet参数名与类中的属性名对应，
 如contextConfigLocation对应FrameworkServlet中的contextConfigLocation，HttpServletBean中的init方法负责将web.xml中的
 参数值set到类的属性中去，接着调用子类FrameworkServlet实现的initServletBean方法，这个方法负责创建和配置webApplicationContext实例
