@@ -12,3 +12,13 @@
 2.当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
 3.git checkout -- file将工作区中的文件还原为暂存区中的版本，如果暂存区没有，就还原为HEAD版本
 
+
+
+### git修改远程仓库url，方法有三种
+1. 直接修改`git remote set-url origin [url]`
+2. 先删后加
+	1. git remote rm origin
+	1. git remote add origin [url]
+
+3. 直接修改.git/config文件
+
