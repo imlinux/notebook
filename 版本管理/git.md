@@ -22,3 +22,16 @@
 
 3. 直接修改.git/config文件
 
+
+### git中文编码
+1. git config --global core.quotepath false
+
+
+
+git ssh代理配置
+
+```text
+git config --global http.proxy 'socks5://127.0.0.1:1080' 
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+
