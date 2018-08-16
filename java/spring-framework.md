@@ -66,3 +66,14 @@ DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的D
 
    [实现类](http://docs.spring.io/spring/docs/3.2.18.RELEASE/spring-framework-reference/htmlsingle/#scheduling)
 
+
+
+
+
+
+
+### ORM
+
+#### JPA
+使用
+

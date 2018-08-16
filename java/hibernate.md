@@ -111,3 +111,18 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder\#
     2. `options`:字段，MetadataBuildingOptionsImpl类型。
     3. `build`：方法，使用jaxb处理hbm文件，生成xml的对象表示，然后调用MetadataBuildingProcess\#build静态方法
 
+
+
+
+
+#### Hibernate user guide阅读
+
+##### 问题
+1. 2.3.2中的FetchType，文档中显示hibernate会忽略这个，除非使用bytecode enhancement。这个属性有什么影响？bytecode enhancement是什么？有什么用？
+
+
+
+
+#### 实体关系
+#####@ManyToOne
+在标记的实体上设置外键
