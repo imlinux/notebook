@@ -125,4 +125,6 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder\#
 
 #### 实体关系
 #####@ManyToOne
-在标记的实体上设置外键
+连接子实体和父实体之间的关系，在标记的实体上设置外键
+
+#####@OneToMany
