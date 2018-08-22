@@ -7,7 +7,15 @@
 
 ## LockSupport
 ###效果
-LockSupport.park暂停当前线程
+LockSupport.park暂停当前线程，使用场景是检查某个条件，如果不满足线程就park。
+**注意**park可能会无原因的返回，所以park一般放在循环中，
+例如：
+```
+while (!canProceed()) { ... LockSupport.park(this); }
+
+```
+park的最佳实践是一般调用LockSupport.park(object),目的是标识线程阻塞在哪个对象上，这个在使用工具诊断线程的时候可以看到这个线程因为什么原因阻塞
+
 LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
 
