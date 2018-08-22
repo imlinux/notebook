@@ -6,6 +6,9 @@
 
 
 ## LockSupport
+###效果
+LockSupport.park暂停当前线程
+LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
 
 ## AQS
