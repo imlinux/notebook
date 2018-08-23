@@ -7,7 +7,7 @@
 
 ## LockSupport是java中除synchronized外一切并发控制类的基础
 
-###效果
+### 效果
 LockSupport.park暂停当前线程，使用场景是检查某个条件，如果不满足线程就park。
 **注意**park可能会无原因的返回，所以park一般放在循环中，
 例如：
@@ -19,15 +19,15 @@ park的最佳实践是一般调用LockSupport.park(object),目的是标识线程
 
 LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
-###文档
+### 文档
 [java doc](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/LockSupport.html)
 
 
 
 ## AQS
 
-###中断线程
-####Thread类提供的中断方法
+### 中断线程
+#### Thread类提供的中断方法
 1. public static boolean interrupted 测试当前线程是否已经中断。线程的中断状态 由该方法清除。换句话说，如果连续两次调用该方法，则第二次调用将返回 false（在第一次调用已清除了其中断状态之后，且第二次调用检验完中断状态前，当前线程再次中断的情况除外）。
 2. public boolean isInterrupted 测试线程是否已经中断。线程的中断状态不受该方法的影响。
 3. public void interrupt() 中断线程。
