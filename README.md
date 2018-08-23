@@ -1,6 +1,6 @@
 # 目录
 
-* [Bda开发](bda-kai-fa.md)
+* [Bda开发](bda开发.md)
 * [汇编](hui-bian.md)
 * [内存屏障](nei-cun-ping-zhang.md)
 * [Linux](linux/README.md)
