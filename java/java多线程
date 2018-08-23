@@ -7,7 +7,7 @@
 
 ## LockSupport是java中除synchronized外一切并发控制类的基础
 
-###效果
+### 效果
 LockSupport.park暂停当前线程，使用场景是检查某个条件，如果不满足线程就park。
 **注意**park可能会无原因的返回，所以park一般放在循环中，
 例如：
