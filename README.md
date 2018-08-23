@@ -1,6 +1,5 @@
 # 目录
 
-* [Introduction](README.md)
 * [Bda开发](bda-kai-fa.md)
 * [汇编](hui-bian.md)
 * [内存屏障](nei-cun-ping-zhang.md)
@@ -23,7 +22,7 @@
   * [gc算法](java/gc-suan-fa.md)
   * [Hibernate](java/hibernate.md)
   * [XML](java/xml/README.md)
-    * [JAXB](java/xml/jaxb.md)
+  * [JAXB](java/xml/jaxb.md)
   * [java8](java/java8.md)
   * [Swing](java/swing.md)
   * [常用框架](java/chang-yong-kuang-jia.md)
