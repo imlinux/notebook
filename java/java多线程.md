@@ -26,6 +26,97 @@ LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
 ## AQS
 
+### CLH(craig landin hagersten)
+代码实现
+```
+public class ClhSpinLock implements Lock{
+    private final ThreadLocal<Node> prev;
+    private final ThreadLocal<Node> node;
+    private final AtomicReference<Node> tail = new AtomicReference<Node>(new Node());
+
+    public ClhSpinLock() {
+        this.node = new ThreadLocal<Node>() {
+            protected Node initialValue() {
+                return new Node();
+            }
+        };
+
+        this.prev = new ThreadLocal<Node>() {
+            protected Node initialValue() {
+                return null;
+            }
+        };
+    }
+
+    /**
+     * 1.初始状态 tail指向一个node(head)节点 
+     * +------+ 
+     * | head | <---- tail 
+     * +------+
+     * 
+     * 2.lock-thread加入等待队列: tail指向新的Node，同时Prev指向tail之前指向的节点
+     * +----------+
+     * | Thread-A |
+     * | := Node  | <---- tail
+     * | := Prev  | -----> +------+
+     * +----------+        | head |
+     *                     +------+ 
+     * 
+     *             +----------+            +----------+
+     *             | Thread-B |            | Thread-A |
+     * tail ---->  | := Node  |     -->    | := Node  | 
+     *             | := Prev  | ----|      | := Prev  | ----->  +------+
+     *             +----------+            +----------+         | head |
+     *                                                          +------+ 
+     * 3.寻找当前node的prev-node然后开始自旋
+     * 
+     */
+    public void lock() {
+        final Node node = this.node.get();
+        node.locked = true;
+        Node pred = this.tail.getAndSet(node);
+        this.prev.set(pred);
+        // 自旋
+        while (pred.locked);
+    }
+
+    public void unlock() {
+        final Node node = this.node.get();
+        node.locked = false;
+        this.node.set(this.prev.get());
+    }
+
+    @Override
+    public void lockInterruptibly() throws InterruptedException {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public boolean tryLock() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public Condition newCondition() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    
+    private static class Node {
+        private volatile boolean locked;
+    }
+}
+
+```
+
 ### 中断线程
 #### Thread类提供的中断方法
 1. public static boolean interrupted 测试当前线程是否已经中断。线程的中断状态 由该方法清除。换句话说，如果连续两次调用该方法，则第二次调用将返回 false（在第一次调用已清除了其中断状态之后，且第二次调用检验完中断状态前，当前线程再次中断的情况除外）。
