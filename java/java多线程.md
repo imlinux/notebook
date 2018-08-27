@@ -25,9 +25,42 @@ LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
 
 ## AQS
+aqs内部使用clh算法的变体
+### CLH(craig landin hagersten)，主要用于实现自旋锁
+#### 自旋锁
+自旋锁是指当一个线程尝试获取某个锁时，如果该锁已经被其他线程占用，就一直循环检测锁是否被释放，而不是进入线程挂起。			
+自旋锁适用于锁保护的临界区很小，锁占用的时间很短	
 
-### CLH(craig landin hagersten)
-代码实现
+#### 简单实现
+
+```
+import java.util.concurrent.atomic.AtomicReference;
+
+public class SimpleSpinLock {
+   private AtomicReference<Thread> owner = new AtomicReference<Thread>();
+
+   public void lock() {
+       Thread currentThread = Thread.currentThread();
+
+              // 如果锁未被占用，则设置当前线程为锁的拥有者
+       while (!owner.compareAndSet(null, currentThread)) {
+       }
+   }
+
+   public void unlock() {
+       Thread currentThread = Thread.currentThread();
+
+              // 只有锁的拥有者才能释放锁
+       owner.compareAndSet(currentThread, null);
+   }
+}
+
+缺点：
+每个线程占用的处理器都在读写同一个变量owner，每次读写操作都必须在多个处理器缓存之间进行缓存同步，大大降低系统整体性能。
+```
+
+clh就是为了解决这个问题的
+clh代码实现
 ```
 public class ClhSpinLock implements Lock{
     private final ThreadLocal<Node> prev;
@@ -83,6 +116,7 @@ public class ClhSpinLock implements Lock{
     public void unlock() {
         final Node node = this.node.get();
         node.locked = false;
+        //等同于出对操作
         this.node.set(this.prev.get());
     }
 
@@ -116,6 +150,9 @@ public class ClhSpinLock implements Lock{
 }
 
 ```
+
+
+### CAS
 
 ### 中断线程
 #### Thread类提供的中断方法
