@@ -18,7 +18,7 @@ while (!canProceed()) { ... LockSupport.park(markerObject); }
 
 ```		
 2. 另外一个线程调用了unpark();
-3. 线程发生中断
+3. 线程发生中断，如调用了interrupt()方法
 
 park的最佳实践是一般调用LockSupport.park(object),目的是标识线程阻塞在哪个对象上，这个在使用工具诊断线程的时候可以看到这个线程因为什么原因阻塞
 
