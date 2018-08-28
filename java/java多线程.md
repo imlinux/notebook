@@ -9,12 +9,17 @@
 
 ### 效果
 LockSupport.park暂停当前线程，使用场景是检查某个条件，如果不满足线程就park。
-**注意**park可能会无原因的返回，所以park一般放在循环中，
-例如：
-```
-while (!canProceed()) { ... LockSupport.park(markerObject); }
+**注意**
+park()会在三种情况下返回
+1. park可能会无原因的返回，所以park一般放在循环中，		
+例如：		
+```		
+while (!canProceed()) { ... LockSupport.park(markerObject); }		
 
-```
+```		
+2. 另外一个线程调用了unpark();
+3. 线程发生中断
+
 park的最佳实践是一般调用LockSupport.park(object),目的是标识线程阻塞在哪个对象上，这个在使用工具诊断线程的时候可以看到这个线程因为什么原因阻塞
 
 LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
@@ -24,7 +29,9 @@ LockSupport.unpark(thread)允许某个阻塞在park调用下的线程运行。
 
 
 
-## AQS
+## AQS (AbstractQueuedSynchronizer)
+
+
 aqs内部使用clh算法的变体
 ### CLH(craig landin hagersten)，主要用于实现自旋锁
 #### 自旋锁
@@ -207,6 +214,7 @@ void muTask {
 不要这样做！如果你不能很好的在catch语句中处理异常，那么你还有两个合理的选择：
 1. 在catch语句中调用Thread.currentThread().interrupt()来设置中断状态。然后调用者就可以对其进行测试：
 ```
+列子1
 void muTask {
 	try {
 		sleep(delay);
@@ -216,6 +224,16 @@ void muTask {
 }
 ```
 2. 或者，更好的选择是标记你的方法将抛出InterruptedException异常。
+
+```
+void parkAndInterrupt() {
+	LockSupport.park(obj);
+	if(Thread.interrupted()) {
+		throw new InterruptedException();
+	}
+}
+
+```
 
 #### 注意事项
 线程协调方法分两大类
