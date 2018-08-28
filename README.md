@@ -27,7 +27,7 @@
   * [Swing](java/swing.md)
   * [常用框架](java/chang-yong-kuang-jia.md)
   * [面试](java/mian-shi.md)
-  * [并发](java/bing-fa.md)
+  * [多线程](java/java多线程.md)
   * [Kafka](java/kafka.md)
   * [oql](java/oql.md)
   * [RxJava](java/rxjava.md)
