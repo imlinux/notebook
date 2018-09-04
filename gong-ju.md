@@ -1,1 +1,0 @@
-1. python -m SimpleHTTPServer 9999  启动一个静态服务器

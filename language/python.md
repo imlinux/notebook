@@ -21,14 +21,14 @@ type(v1);//可以知道变量的类型
 
 ## 逻辑运算
 
-python 没有&&，\|\|，!  
+python 没有&&，||，!  
 而是用and,or来代替
 
 ## 分支语句
 
 1. if
 
-   ```text
+   ```
     a=100
     b=100
     if a==b:
@@ -43,7 +43,7 @@ python 没有&&，\|\|，!
 
 1. for循环
 
-   ```text
+   ```
     //循环打印数组
     for i in [1,2,3,4,5]:
         print i
@@ -93,7 +93,7 @@ python 没有&&，\|\|，!
 7. 搜索列表  
    1. 查询元素是否在里表中
 
-   ```text
+   ```
     100 in l1
    ```
 
@@ -103,7 +103,7 @@ python 没有&&，\|\|，!
 
 8. 列表排序
 
-   ```text
+   ```
    l1.sort()
    l1.reverse()
    //不修改原始的列表，返回排好序的列表
@@ -112,7 +112,7 @@ python 没有&&，\|\|，!
 
 ### 双重列表
 
-```text
+```
 l1 = 
 [
     [1,2,3],
@@ -129,41 +129,41 @@ l1 =
 
 1. 创建字典
 
-   ```text
+   ```
    m1 = {}
    m2 = {'a': 100, 'b': 200}
    ```
 
 2. 添加/修改
 
-   ```text
+   ```
    m1['a']=100;
    m1['b']=200;
    ```
 
 3. 删除
 
-   ```text
+   ```
    del m1['a']
    m1.clear();
    ```
 
 4. 搜索key是否在
 
-   ```text
+   ```
    'a' in m1;
    ```
 
 5. 字典常用的方法
 
-   ```text
+   ```
    m1.keys()
    m1.values()
    ```
 
 6. 排序
 
-   ```text
+   ```
    for key in sorted(m1.keys()):
     print key
    ```
@@ -174,7 +174,7 @@ l1 =
 
 1. 定义函数
 
-   ```text
+   ```
     def sayHello():
         print 'hello` 
 
@@ -187,7 +187,7 @@ l1 =
 
 2. 作用域
 
-   ```text
+   ```
    a=100//全局变量
    def add(v):
        return a+v;
@@ -203,7 +203,7 @@ l1 =
 
 3. **可修改类型**默认为**引用**，**不可修改类型**为**值传递**
 
-   ```text
+   ```
    a=[1,2,3,4,5]
    def add(a):
        a.append(6);  
@@ -215,7 +215,7 @@ l1 =
 
 1. 定义类
 
-   ```text
+   ```
    class C1:
       def m1(self):
          print self
@@ -223,19 +223,19 @@ l1 =
 
 2. 创建对象
 
-   ```text
+   ```
       o1 = C1();
    ```
 
 3. 定义属性
 
-   ```text
+   ```
       o1.name="o1";
    ```
 
 4. 构造方法
 
-   ```text
+   ```
    __init()__
    __init(a1,a2)__
    ```
@@ -244,7 +244,7 @@ l1 =
 
 5. 多态和继承
 
-   ```text
+   ```
    class C1:
       def m1(self):
          print "c1"
@@ -256,7 +256,7 @@ l1 =
 
 6. 注意事项
 
-   ```text
+   ```
    类的方法必须定义self参数 
    class C1:
       def m1(self):
@@ -270,7 +270,7 @@ l1 =
 
 模块就是一个普通的python文件
 
-```text
+```
    # this is the file "my_module.py"
    # we're going to use it in another program
       def c_to_f(celsius):
@@ -287,7 +287,7 @@ l1 =
 
 1. 读取文件
 
-```text
+```
 my_file = open('/home/dong/1.txt', 'r');
 my_file.readlines();
 my_file.close();
@@ -299,7 +299,7 @@ my_file.close();
 
 2. 序列化对象
 
-```text
+```
 import pickle;
 
 my_list = [1,2,3]
@@ -309,10 +309,22 @@ pickle.dump(my_list, my_file);
 
 1. 反序列化
 
-```text
+```
 import pickle;
 my_list = pickle.load(my_file);
 ```
+
+## ipython
+### 魔术命令（Magic command）
+以%号开头的命令
+1. %paste， %cpaste运行剪切板上的python代码
+2. %quickref, %magic查看魔术命令的手册
+
+
+## NumPy
+
+## matplotlib
+
 
 ## pandas
 
