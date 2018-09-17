@@ -69,7 +69,10 @@ DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的D
 
 
 
+### Spring MVC
 
+#### RequestMappingHandlerMapping
+1. 通过注解RequestMapping创建RequestMappingInfo，RequestMappingHandlerMapping#createRequestMappingInfo
 
 
 ### ORM
