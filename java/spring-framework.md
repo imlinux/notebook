@@ -71,6 +71,8 @@ DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的D
 
 ### Spring MVC
 
+#### ModelAndView
+包含Object view ，ModelMap model， HttpStatus status三个字段。其中ModelMap直接集成LinkedHashMap保存键值对
 #### RequestMappingHandlerMapping
 1. 通过注解RequestMapping创建RequestMappingInfo，RequestMappingHandlerMapping#createRequestMappingInfo
 
