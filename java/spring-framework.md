@@ -16,9 +16,9 @@
 
 #### 抽象类
 
-1. AbstractApplicationContext核心类，spring的初始化逻辑都在这里面，查看这个类可以明白spring的各个功能怎么使用。
+1. ***AbstractApplicationContext核心类，spring的初始化逻辑都在这里面，查看这个类可以明白spring的各个功能怎么使用。***
 2. AbstractRefreshableApplicationContext，支持多次调用refresh方法
-3. ![](../assets/applicationcontext.png)
+3. ![](../assets/images/applicationcontext.png)
 
 ## Spring xml定义解析
 
@@ -34,6 +34,15 @@ DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的D
 如contextConfigLocation对应FrameworkServlet中的contextConfigLocation，HttpServletBean中的init方法负责将web.xml中的
 参数值set到类的属性中去，接着调用子类FrameworkServlet实现的initServletBean方法，这个方法负责创建和配置webApplicationContext实例
 接着调用DispatcherServlet#onRefresh方法
+
+
+## 扩展Spring
+
+### BeanFactoryPostProcessor
+实现类：PropertySourcesPlaceholderConfigurer，
+
+### BeanPostProcessor 
+
 ## Transaction
 
 #### 接口
