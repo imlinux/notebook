@@ -18,7 +18,7 @@
 
 1. AbstractApplicationContext核心类，spring的初始化逻辑都在这里面，查看这个类可以明白spring的各个功能怎么使用。
 2. AbstractRefreshableApplicationContext，支持多次调用refresh方法
-3. ![](../.gitbook/assets/applicationcontext.png)
+3. ![](../assets/applicationcontext.png)
 
 ## Spring xml定义解析
 

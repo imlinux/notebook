@@ -1,0 +1,86 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "SpringFramework",
+	"ownedElements": [
+		{
+			"_type": "UMLCollaboration",
+			"_id": "AAAAAAFmHiDo+78+j5k=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Collaboration1",
+			"ownedElements": [
+				{
+					"_type": "UMLInteraction",
+					"_id": "AAAAAAFmHiDo/L8/Sb4=",
+					"_parent": {
+						"$ref": "AAAAAAFmHiDo+78+j5k="
+					},
+					"name": "Interaction1",
+					"ownedElements": [
+						{
+							"_type": "UMLSequenceDiagram",
+							"_id": "AAAAAAFmHiDo/L9AxOU=",
+							"_parent": {
+								"$ref": "AAAAAAFmHiDo/L8/Sb4="
+							},
+							"name": "ApplicationContext初始化过程",
+							"ownedViews": [
+								{
+									"_type": "UMLFrameView",
+									"_id": "AAAAAAFmHiDo/b9BZJc=",
+									"_parent": {
+										"$ref": "AAAAAAFmHiDo/L9AxOU="
+									},
+									"model": {
+										"$ref": "AAAAAAFmHiDo/L9AxOU="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFmHiDo/r9CwAw=",
+											"_parent": {
+												"$ref": "AAAAAAFmHiDo/b9BZJc="
+											},
+											"font": "Arial;13;0",
+											"left": 75.97900390625,
+											"top": 10,
+											"width": 174.39892578125,
+											"height": 13,
+											"text": "ApplicationContext初始化过程"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFmHiDpAL9D//Y=",
+											"_parent": {
+												"$ref": "AAAAAAFmHiDo/b9BZJc="
+											},
+											"font": "Arial;13;1",
+											"left": 10,
+											"top": 10,
+											"width": 60.97900390625,
+											"height": 13,
+											"text": "interaction"
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 5,
+									"top": 5,
+									"width": 1084,
+									"height": 940,
+									"nameLabel": {
+										"$ref": "AAAAAAFmHiDo/r9CwAw="
+									},
+									"frameTypeLabel": {
+										"$ref": "AAAAAAFmHiDpAL9D//Y="
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
