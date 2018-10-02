@@ -7,7 +7,7 @@
 
 
 ## java并发基石
-1. volatile控制内存可见性
+1. [volatile控制内存可见性](../assets/pdf/深入理解Java内存模型（四）——volatile)
 2. Unsafe.park,Unsafe.unpark调度线程
 3. synchronized
 
