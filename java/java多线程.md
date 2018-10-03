@@ -3,21 +3,28 @@
 1. 伪共享 [jmh关于伪共享的基准测试](http://hg.openjdk.java.net/code-tools/jmh/file/36a2ee9a075e/jmh-samples/src/main/java/org/openjdk/jmh/samples/JMHSample_22_FalseSharing.java#l77)
 
 
-## [内存屏障与指令重排序](../assets/pdf/深入理解Java内存模型（一）——基础.pdf)
+## java内存模型
+
+1. **happends-before**为jvm的规范，具体的实现根据cpu架构的不同使用特定的cpu指令来实现，在x86平台上主要使用**内存屏障**来实现happend-before。
+2. 作为java程序员在开发程序的时候只要知道happends-before为我们提供的保证就可以了，不需要知道jvm是如何实现happends-before的
+
+### [happends-before规则](../assets/pdf/happens-before.pdf)
 
 
-## java并发基石
+
+
+
+## java内存模型实现
+
+### [内存屏障与指令重排序](../assets/pdf/深入理解Java内存模型（一）——基础.pdf)
+
+
+### java并发基石
 1. [volatile控制内存可见性](../assets/pdf/深入理解Java内存模型（四）——volatile)
 2. Unsafe.park,Unsafe.unpark调度线程
 3. synchronized
 
-
-## java内存模型
-
-1. **happens-before**为jvm的规范，具体的实现根据cpu架构的不同使用特定的指令来实现，在x86平台上主要使用**内存屏障**来实现happend-before
-
-
-## LockSupport是java中除synchronized外一切并发控制类的基础
+### LockSupport是java中除synchronized外一切并发控制类的基础
 
 ### 效果
 LockSupport.park暂停当前线程，使用场景是检查某个条件，如果不满足线程就park。
