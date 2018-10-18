@@ -265,3 +265,15 @@ void parkAndInterrupt() {
 线程协调方法分两大类
 1. 抛出InterruptedException异常的方法一般都会清楚中断状态。如sleep
 2. 不抛出InterruptedException异常的方法，在中断发生时一般会返回，但是会保留中断状态标志位，这时候调用isInterrupted会返回true
+
+
+
+### JIT编译器
+-XX:+UnlockDiagnosticVMOptions
+-XX:+PrintAssembly
+-Xcomp
+-XX:CompileCommand=dontinline,*Bar.main
+-XX:CompileCommand=compileonly,*Bar.main
+查看JIT编译器生成的汇编代码。
+
+[jitwatch可以方便查看java代码，字节码，汇编代码](https://github.com/AdoptOpenJDK/jitwatch)
