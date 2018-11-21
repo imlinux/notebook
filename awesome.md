@@ -19,3 +19,16 @@
 
 ### web shell
 1. [xterm](https://github.com/xtermjs/xterm.js)
+
+
+### js框架
+1. electronjs
+2. vue.js
+3. react
+
+
+### CORS js 框架
+1. [xdomain](https://github.com/jpillora/xdomain)
+
+### ajax
+1. [axios](https://github.com/axios/axios)
