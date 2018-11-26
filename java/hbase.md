@@ -38,7 +38,7 @@
 
 
 
-## HRegion 管理一个表， RegionScanner负责读取
+## HRegion 管理一个表， RegionScanner负责读取，写数据方法入口mutateRow。
 1. HStore 保存一个列族，KeyValueScanner负责读取
 2. StoreFile		，StoreFileScanner负责读取,StoreFile会管理多个Hfile,所以会有多个StoreFileScanner
 
@@ -53,9 +53,11 @@
 
 
 ## 访问控制
-1. hbase的超级用户和运行服务端进程的当前用户拥有所有权限，参见TableAuthManager#initGlobal方法
-2. /hbase/acl/tablename节点保存的是（用户， 权限列表）
-3. MasterRpcServices#getSecurityCapabilities,将AccessController写死，导致自定义AccessController时不能使用grant,revoke等命令
+1. AccessController
+2. AccessControlLists
+3. hbase的超级用户和运行服务端进程的当前用户拥有所有权限，参见TableAuthManager#initGlobal方法
+4. /hbase/acl/tablename节点保存的是（用户， 权限列表）
+5. MasterRpcServices#getSecurityCapabilities,将AccessController写死，导致自定义AccessController时不能使用grant,revoke等命令
 
 ```
   @Override
@@ -99,7 +101,11 @@
 
 ```
 
-
+## hbase加密
+1. 整个集群有一个主密钥
+2. 可以单独为一个列组设置一个密钥。
+3. 内置实现可以查看HStore源码
+4. 集群运行时不能修改
 
 ## 方案1
 查看Hstore方法想办法实例化StoreScanner，StoreScanner应该是主要用过滤的方法
