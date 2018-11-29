@@ -9,3 +9,15 @@ select reportdate, STBORROW + LTBORROW, SUMSHEQUITY, SUMSHEQUITY_YOY, STBORROW_Y
 
 
 select * from capital_flow where code='000063.SZ';
+
+select * from capital_flow where name='汽车行业';
+
+
+
+select distinct name, code from capital_flow where code like 'BK%' order by date, code;
+
+select t1.date, t1.name, t1.zlje/t2.s from capital_flow t1 join (
+select date,sum(zlje) s from capital_flow where code like 'BK%' group by date) t2
+on t1.date = t2.date and t1.code like 'BK%';
+
+select distinct name from capital_flow;
