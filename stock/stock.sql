@@ -21,3 +21,6 @@ select date,sum(zlje) s from capital_flow where code like 'BK%' group by date) t
 on t1.date = t2.date and t1.code like 'BK%';
 
 select distinct name from capital_flow;
+
+
+select  distinct date from wh;
