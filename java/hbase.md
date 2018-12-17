@@ -1,6 +1,6 @@
 
 
-## RpcServer
+## RpcServer(负责通信)
 1. Listener
 	1. Reader, Listener线程管理n个Reader线程， listener负责accept一个socket, 初始化为Connection后，通过Selector传递给Reader线程  
 		Reader将请求封装为Call对象，交给RpcScheduler
@@ -10,13 +10,15 @@
 
 3. Responder 从Connection中的responseQueue队列中取出Call对象返回给Client
 
-## RDRpcServices
+## rpc处理实现
+### RSRpcServices
 
-## MasterRpcServices
+### MasterRpcServices
 
-## HRegionServer
+## 进程入口
+### HRegionServer
 
-## HMaster
+### HMaster
 
 
 ## coprocessors
@@ -40,12 +42,17 @@
 
 ## HRegion 管理一个表， RegionScanner负责读取，写数据方法入口mutateRow。
 1. HStore 保存一个列族，KeyValueScanner负责读取
+  1. DefaultMemStore 保存一些Cell，会定时刷新到磁盘上面，内部使用ConcurrentNavigableMap来保存数据
 2. StoreFile		，StoreFileScanner负责读取,StoreFile会管理多个Hfile,所以会有多个StoreFileScanner
 
 
 3. HRegion#initializeRegionInternals调用initializeStores初始化Hstore
 4. HRegion#getScanner调用instantiateRegionScanner实例化RegionScanner，RegionScannerImpl内部使用KeyValueHeap，KeyValueHeap内部使用从Store获取的KeyValueScanner
 5. KeyValueScanner代表每一列
+
+## Comparator
+1. KeyValue.KVComparator
+2. 
 
 ## hbase过滤
 1. KeyOnlyFilter

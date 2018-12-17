@@ -15,13 +15,9 @@
 
 1. 安装gnome-tweak-tool
 	1. sudo apt install gnome-tweak-tool
-
 2. [gnome3主题](https://www.gnome-look.org/)
-
 3. 安装搜狗输入法
-
 4. [electron-ssr](https://github.com/erguotou520)
-
 5. Gnome 扩展
 	1. [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
 	2. [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
@@ -30,3 +26,14 @@
 	5. [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
 	6. [TaskBar](https://extensions.gnome.org/extension/584/taskbar/)
 	7. [TopIcons Plus遗留版本的系统托盘](https://extensions.gnome.org/extension/1031/topicons/)
+	8. [Pixel Saver节省屏幕空间](https://extensions.gnome.org/extension/723/pixel-saver/)
+6. sudo免密码：dong ALL=(ALL) NOPASSWD: ALL
+
+
+### 常用配置
+
+#### 免密码配置
+
+1. ssh-keygen -t rsa
+2. cat .ssh/id_rsa.pub >> .ssh/authorized_keys
+3. chmod 600 .ssh/authorized_keys

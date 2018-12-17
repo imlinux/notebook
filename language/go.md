@@ -304,3 +304,6 @@ fmt.Println("done")
 6. 结构体 //定义 type Vertex struct { X int Y int } //结构体指针 v := Vertex{1, 2} p := &v p.X = 1e9 fmt.Println\(v\) //初始化 v1 = Vertex{1, 2} // 类型为 Vertex v2 = Vertex{X: 1} // Y:0 被省略 v3 = Vertex{} // X:0 和 Y:0 p = &Vertex{1, 2} // 类型为 \*Vertex
 7. 接口
 
+
+### 资料
+1. [代码组织](https://golang.org/doc/code.html#Workspaces)
