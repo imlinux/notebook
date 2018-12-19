@@ -39,20 +39,32 @@
 可以扩展rpc接口
 
 
+## hbase存储相关类
 
-## HRegion 管理一个表， RegionScanner负责读取，写数据方法入口mutateRow。
-1. HStore 保存一个列族，KeyValueScanner负责读取
-  1. DefaultMemStore 保存一些Cell，会定时刷新到磁盘上面，内部使用ConcurrentNavigableMap来保存数据
-2. StoreFile		，StoreFileScanner负责读取,StoreFile会管理多个Hfile,所以会有多个StoreFileScanner
+### HRegion
+
+管理一个表， RegionScanner负责读取，写数据方法入口mutateRow。\
+HRegion#initializeRegionInternals调用initializeStores初始化Hstore \
+HRegion#getScanner调用instantiateRegionScanner实例化RegionScanner，RegionScannerImpl内部使用KeyValueHeap，KeyValueHeap内部使用从Store获取的KeyValueScanner \
+KeyValueScanner代表每一列
+
+### HStore
+
+HStore 管理一个列族
+
+插入或修改的数据会首先插入到MemStore,之后刷新到SroreFile
+
+### DefaultMemStore
+DefaultMemStore 保存一些Cell，会定时刷新到磁盘上面，内部使用ConcurrentNavigableMap来保存数据,插入到DefaultMemStore都是有序的
+
+### StoreFile
 
 
-3. HRegion#initializeRegionInternals调用initializeStores初始化Hstore
-4. HRegion#getScanner调用instantiateRegionScanner实例化RegionScanner，RegionScannerImpl内部使用KeyValueHeap，KeyValueHeap内部使用从Store获取的KeyValueScanner
-5. KeyValueScanner代表每一列
-
-## Comparator
+### Comparator
 1. KeyValue.KVComparator
 2. 
+
+
 
 ## hbase过滤
 1. KeyOnlyFilter
