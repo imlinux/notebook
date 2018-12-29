@@ -24,7 +24,7 @@
 ## coprocessors
 1. AccessController
 
-###coprocessorHost负责管理，加载，调用coprocessors
+### coprocessorHost负责管理，加载，调用coprocessors
 1. MasterCoprocessorHost
     加载hbase.coprocessor.master.classes
 2. RegionCoprocessorHost
@@ -52,13 +52,23 @@ KeyValueScanner代表每一列
 
 HStore 管理一个列族
 
-插入或修改的数据会首先插入到MemStore,之后刷新到SroreFile
+插入或修改的数据会首先插入到MemStore,之后**保持顺序**刷新到SroreFile，每刷新一次都会生成一个StoreFile \
+HStore#createWriterInTmp创建Writer
 
 ### DefaultMemStore
 DefaultMemStore 保存一些Cell，会定时刷新到磁盘上面，内部使用ConcurrentNavigableMap来保存数据,插入到DefaultMemStore都是有序的
 
 ### StoreFile
+对应列簇目录下的一个文件
 
+### StoreFile.Writer
+
+### HFile.Writer
+
+### HFileBlock.Writer
+
+### HFileContext
+传递信息
 
 ### Comparator
 1. KeyValue.KVComparator
