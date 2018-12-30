@@ -1,3 +1,15 @@
+### 入口
+
+HiveServer2#startHiveServer2
+
+
+### 服务端核心类
+
+**HiverServer2**实例化CLIService和ThriftHttpCLIService \
+**ThriftHttpCLIService**负责通信,通过调用CLIService来响应客户端请求
+**CLIService**
+
+
 ### 认证和授权
 1. AuthenticationProviderFactory
 	1. HiveAuthenticationProvider身份验证
