@@ -1,0 +1,13 @@
+
+## 核心概念
+
+Spring Data的中心接口是**Repository**
+
+## AnnotationRepositoryConfigurationSource
+读取JpaRepositoryConfigExtension注解的属性值
+
+
+## RepositoryConfigurationExtension调用顺序
+
+RepositoryConfigurationExtension的使用可以查看RepositoryConfigurationDelegate#registerRepositoriesIn，先调用registerBeansForRoot用来注册一些必须的bean，  
+接着调用getRepositoryConfigurations方法来查找用户定义的Repository
