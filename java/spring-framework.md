@@ -84,6 +84,35 @@ DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的D
 
 ### Spring MVC
 
+#### DispatcherServlet初始化时序图
+
+```plantuml
+participant ServletContainer
+activate ServletContainer
+
+create DispatcherServlet
+ServletContainer -> DispatcherServlet : new
+activate DispatcherServlet
+
+ServletContainer -> DispatcherServlet : HttpServletBean#init()
+
+create BeanWrapper
+DispatcherServlet-> BeanWrapper : new
+activate BeanWrapper
+BeanWrapper -> DispatcherServlet: setXXX
+deactivate BeanWrapper
+
+DispatcherServlet -> DispatcherServlet : FrameworkServlet#initServletBean()
+
+DispatcherServlet -> DispatcherServlet : FrameworkServlet#initWebApplicationContext
+
+DispatcherServlet -> DispatcherServlet : FrameworkServlet#initFrameworkServlet
+
+
+
+@enduml
+```
+
 #### ModelAndView
 包含Object view ，ModelMap model， HttpStatus status三个字段。其中ModelMap直接集成LinkedHashMap保存键值对
 #### RequestMappingHandlerMapping
