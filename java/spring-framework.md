@@ -94,33 +94,284 @@ create DispatcherServlet
 ServletContainer -> DispatcherServlet : new
 activate DispatcherServlet
 
-ServletContainer -> DispatcherServlet : HttpServletBean#init()
+    ServletContainer -> DispatcherServlet : HttpServletBean#init()
 
-create BeanWrapper
-DispatcherServlet-> BeanWrapper : new
-activate BeanWrapper
-BeanWrapper -> DispatcherServlet: setXXX
-deactivate BeanWrapper
+    create BeanWrapper
+    DispatcherServlet-> BeanWrapper : new
+    activate BeanWrapper
+    note right
+        学习BeanWrapper的用法
+    end note
+    DispatcherServlet-> BeanWrapper : setPropertyValues
+    BeanWrapper -> DispatcherServlet: setXXX
+    deactivate BeanWrapper
 
-DispatcherServlet -> DispatcherServlet : FrameworkServlet#initServletBean()
+    DispatcherServlet -> DispatcherServlet : FrameworkServlet#initServletBean()
+    activate DispatcherServlet
+        DispatcherServlet -> DispatcherServlet : FrameworkServlet#initWebApplicationContext
+        activate DispatcherServlet
+            create WebApplicationContext
+            DispatcherServlet -> WebApplicationContext: createWebApplicationContext
+            activate WebApplicationContext
+            note left
+                创建webApplicationContext层级，并且刷新
+            end note
 
-DispatcherServlet -> DispatcherServlet : FrameworkServlet#initWebApplicationContext
+            DispatcherServlet -> DispatcherServlet : onRefresh
+            activate DispatcherServlet
+                DispatcherServlet -> DispatcherServlet : initStrategies
+                activate DispatcherServlet
+                    DispatcherServlet -> DispatcherServlet : initMultipartResolver
+                    DispatcherServlet -> DispatcherServlet : initLocaleResolver
+                    DispatcherServlet -> DispatcherServlet : initThemeResolver
+                    DispatcherServlet -> DispatcherServlet : initHandlerMappings
+                    DispatcherServlet -> DispatcherServlet : initHandlerAdapters
+                    DispatcherServlet -> DispatcherServlet : initHandlerExceptionResolvers
+                    DispatcherServlet -> DispatcherServlet : initRequestToViewNameTranslator
+                    DispatcherServlet -> DispatcherServlet : initViewResolvers
+                    DispatcherServlet -> DispatcherServlet : initFlashMapManager
+                deactivate DispatcherServlet
+                DispatcherServlet -> DispatcherServlet : FrameworkServlet#initFrameworkServlet
+            deactivate DispatcherServlet
+        deactivate DispatcherServlet
+    deactivate DispatcherServlet
+```
 
-DispatcherServlet -> DispatcherServlet : FrameworkServlet#initFrameworkServlet
+#### DispatcherServlet#initHandlerMappings 流程图
+
+```plantuml
+
+(*) --> 开始
+if "detectAllHandlerMappings" then
+    -->[true] "搜索ApplicationContext中HandlerMapping的实现类,添加到handlerMappings中"
+    -->  " "
+else
+    -->[false] "添加HANDLER_MAPPING_BEAN_NAME名字的bean到handlerMappings中"
+    -->  " "
+
+endif
+
+if "handlerMappings==null" then
+    -->[true] "读取DispatcherServlet.properties中配置的默认实现类"
+    note left
+        DispatcherServlet.properties中配置两个默认实现，
+        BeanNameUrlHandlerMapping和RequestMappingHandlerMapping
+    end note
+endif
+
+--> (*)
+```
+
+#### RequestMappingHandlerMapping初始化时序图
+
+```plantuml
+
+participant WebApplicationContext
+activate WebApplicationContext
+
+participant RequestMappingHandlerMapping
+activate RequestMappingHandlerMapping
+
+WebApplicationContext -> RequestMappingHandlerMapping: ApplicationObjectSupport#setApplicationContext
+activate RequestMappingHandlerMapping
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMapping#initApplicationContext
+activate RequestMappingHandlerMapping
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMapping#extendInterceptors
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMapping#detectMappedInterceptors
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMapping#initInterceptors
+deactivate RequestMappingHandlerMapping
+deactivate RequestMappingHandlerMapping
+
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: RequestMappingHandlerMapping#afterPropertiesSet
+activate RequestMappingHandlerMapping
+
+create RequestMappingInfo.BuilderConfiguration
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: new
+activate  RequestMappingInfo.BuilderConfiguration
+
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setUrlPathHelper
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setPathMatcher
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setSuffixPatternMatch
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setTrailingSlashMatch
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setRegisteredSuffixPatternMatch
+RequestMappingHandlerMapping -> RequestMappingInfo.BuilderConfiguration: setContentNegotiationManager
+
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMethodMapping#afterPropertiesSet
+activate RequestMappingHandlerMapping
+RequestMappingHandlerMapping -> RequestMappingHandlerMapping: AbstractHandlerMethodMapping#initHandlerMethods
+note left
+扫描applicationContext或祖先Context中的实体，
+end note
+deactivate RequestMappingHandlerMapping
+
+deactivate RequestMappingHandlerMapping
+```
+
+#### DispatcherServlet#initHandlerAdapters
+
+与initHandlerMappings的过程类似，默认的HandlerAdapter是  
+HttpRequestHandlerAdapter  
+SimpleControllerHandlerAdapter  
+RequestMappingHandlerAdapter  
+
+#### RequestMappingHandlerAdapter初始化
+
+```plantuml
+participant WebApplicationContext
+activate WebApplicationContext
+
+participant RequestMappingHandlerAdapter
+activate RequestMappingHandlerAdapter
+[-> RequestMappingHandlerAdapter: 构造函数
+WebApplicationContext -> RequestMappingHandlerAdapter: afterPropertiesSet
+
+```
+
+afterPropertiesSet方法流程图
+
+```plantuml
+
+(*) --> initControllerAdviceCache()
+
+if "this.argumentResolvers == null" then
+    --> [true] resolvers = getDefaultArgumentResolvers();
+    --> argumentResolvers = new HandlerMethodArgumentResolverComposite().addResolvers(resolvers);
+    --> " "
+else
+    --> [false] " "
+endif
+
+if "this.initBinderArgumentResolvers == null" then
+    --> [true] resolvers = getDefaultInitBinderArgumentResolvers();
+    --> initBinderArgumentResolvers = new HandlerMethodArgumentResolverComposite().addResolvers(resolvers);
+    --> "  "
+else 
+    --> [false] "  "
+endif
+
+if "this.returnValueHandlers == null" then
+    --> [true] handlers = getDefaultReturnValueHandlers();
+    --> returnValueHandlers = new HandlerMethodReturnValueHandlerComposite().addHandlers(handlers);
+    --> "   "
+else
+    --> [false] "   "
+endif
+
+--> (*)
+```
+
+#### DispatcherServlet处理http get请求
+
+```plantuml
+
+participant DispatcherServlet
+activate DispatcherServlet
+
+participant HttpServletRequest
+activate HttpServletRequest
+
+participant WebApplicationContext
+activate WebApplicationContext
+
+participant HandlerExecutionChain
+activate HandlerExecutionChain
+
+participant HandlerAdapter
+activate HandlerAdapter
+
+[-> DispatcherServlet: doService
+activate DispatcherServlet
+    DispatcherServlet -> HttpServletRequest: setAttribute(WEB_APPLICATION_CONTEXT_ATTRIBUTE, applicationContext)
+    DispatcherServlet -> HttpServletRequest: setAttribute 设置其他属性值
+    DispatcherServlet -> DispatcherServlet: doDispatch
+    activate DispatcherServlet
+        DispatcherServlet -> DispatcherServlet: checkMultipart
+        note left
+            调用MultipartResolver，并返回MultipartHttpServletRequest
+        end note
+
+        DispatcherServlet -> DispatcherServlet: getHandler
+
+        DispatcherServlet -> DispatcherServlet: getHandlerAdapter
+
+        DispatcherServlet -> HandlerExecutionChain: applyPreHandle
+        HandlerExecutionChain --> DispatcherServlet: true | false
+
+        DispatcherServlet -> HandlerAdapter: handle
+        HandlerAdapter --> DispatcherServlet: ModelAndView mv
+
+        DispatcherServlet -> DispatcherServlet: applyDefaultViewName
+        DispatcherServlet -> HandlerExecutionChain: applyPostHandle
+        DispatcherServlet -> DispatcherServlet: processDispatchResult
+    deactivate DispatcherServlet
+deactivate DispatcherServlet
 
 
+```
 
-@enduml
+#### DispatcherServlet#getHandler流程
+
+循环调用handlerMappings中的HandlerMapping#getHandler()方法，直到有HandlerMapping返回非空  
+对象退出循环，返回HandlerMapping#getHandler()返回的HandlerExecutionChain对象
+
+#### RequestMappingHandlerMapping类图
+
+```plantuml
+
+AbstractHandlerMapping <|-- AbstractHandlerMethodMapping
+AbstractHandlerMethodMapping <|-- RequestMappingInfoHandlerMapping
+RequestMappingInfoHandlerMapping <|-- RequestMappingHandlerMapping
+
+abstract class AbstractHandlerMapping {
+    +getHandler()
+    {abstract} #getHandlerInternal()
+}
+```
+
+#### AbstractHandlerMapping#getHandler流程
+
+```plantuml
+
+(*) --> handler = getHandlerInternal(request)
+
+if "handler==null" then
+    --> [true] "handler = getDefaultHandler()"
+    if "handler==null" then
+        --> [true] (*)
+    else
+        --> [false] " "
+    endif
+else
+    --> [false] " "
+    if "handler instanceof String" then
+    note left
+        如果是字符串就认为是bean name，需要从applicationContext从取出
+    end note
+        -->[true] handlerName = (String) handler;
+        --> handler = obtainApplicationContext().getBean(handlerName);
+        --> "  "
+    else
+        --> [false] "  "
+    endif
+
+    --> executionChain = getHandlerExecutionChain(handler, request);
+    --> return executionChain
+
+endif
+
+--> (*)
 ```
 
 #### ModelAndView
-包含Object view ，ModelMap model， HttpStatus status三个字段。其中ModelMap直接集成LinkedHashMap保存键值对
-#### RequestMappingHandlerMapping
-1. 通过注解RequestMapping创建RequestMappingInfo，RequestMappingHandlerMapping#createRequestMappingInfo
 
+包含Object view ，ModelMap model， HttpStatus status三个字段。其中ModelMap直接集成LinkedHashMap保存键值对
+
+#### RequestMappingHandlerMapping
+
+1. 通过注解RequestMapping创建RequestMappingInfo，RequestMappingHandlerMapping#createRequestMappingInfo
 
 ### ORM
 
 #### JPA
-使用
 
+使用
