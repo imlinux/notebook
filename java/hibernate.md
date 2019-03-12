@@ -121,10 +121,17 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder\#
 1. 2.3.2中的FetchType，文档中显示hibernate会忽略这个，除非使用bytecode enhancement。这个属性有什么影响？bytecode enhancement是什么？有什么用？
 
 
+#### 字段
+
+1. (basic-jpa-convert)[http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#basic-jpa-convert]
 
 
 #### 实体关系
-#####@ManyToOne
-连接子实体和父实体之间的关系，在标记的实体上设置外键
 
-#####@OneToMany
+@ManyToOne  
+单向关系时，通过外键实现  
+
+@OneToMany
+
+通过新建一个关联表是实现，  
+单向关系时性能不好(参考官方文档说明)[http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-many]  双向关系时ManyToOne端作为关系的控制端，当使用OneToMany时最佳实践是使用双向关系

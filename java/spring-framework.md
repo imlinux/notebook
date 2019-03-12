@@ -16,7 +16,11 @@
 
 #### 工具类
 
-1. ClassPathScanningCandidateComponentProvide查找包下面的指定的类
+ ClassPathScanningCandidateComponentProvide查找包下面的指定的类  
+ BeanWrapperImpl，实际开发中使用PropertyAccessorFactory#forBeanPropertyAccess来获取实例  
+ DataBinder, bind方法使用BeanWrapper来给java bean的字段赋值，
+
+
 
 #### 抽象类
 
@@ -29,20 +33,11 @@
 #### 接口
 
 1. NamespaceHandler处理各个名字空间,如context,aop,tx等等
-## spring mvc
-1. HttpServletBean
-2. FrameworkServlet
-3. DispatcherServlet
-
-DispatcherServlet继承FrameworkServlet继承HttpServletBean，web.xml中的的DispatcherServlet参数名与类中的属性名对应，
-如contextConfigLocation对应FrameworkServlet中的contextConfigLocation，HttpServletBean中的init方法负责将web.xml中的
-参数值set到类的属性中去，接着调用子类FrameworkServlet实现的initServletBean方法，这个方法负责创建和配置webApplicationContext实例
-接着调用DispatcherServlet#onRefresh方法
-
 
 ## 扩展Spring
 
 ### BeanFactoryPostProcessor
+
 实现类：PropertySourcesPlaceholderConfigurer，
 
 ### BeanPostProcessor 
@@ -214,7 +209,9 @@ HttpRequestHandlerAdapter
 SimpleControllerHandlerAdapter  
 RequestMappingHandlerAdapter  
 
-#### RequestMappingHandlerAdapter初始化
+#### RequestMappingHandlerAdapter
+
+初始化
 
 ```plantuml
 participant WebApplicationContext
@@ -259,6 +256,58 @@ endif
 
 --> (*)
 ```
+
+相关组件
+
+HandlerMethodArgumentResolver: 从请求中提取值, 并且使用WebDataBinder将值转化为hander method的参数对应的类型的值  
+WebDataBinderFactory: 创建WebDataBinder
+WebDataBinder:  把HandlerMethodArgumentResolver提取的值，转换为handler method的参数对应的类型的值  
+
+DefaultArgumentResolvers
+
+1. RequestParamMethodArgumentResolver
+2. RequestParamMapMethodArgumentResolver
+3. PathVariableMethodArgumentResolver
+4. PathVariableMapMethodArgumentResolver
+5. MatrixVariableMethodArgumentResolver
+6. MatrixVariableMapMethodArgumentResolver
+7. ServletModelAttributeMethodProcessor
+8. RequestResponseBodyMethodProcessor使用HttpMessageConverter来将请求体转换为对象，并使用webDataBinder来验证对象
+9. RequestPartMethodArgumentResolver
+10. RequestHeaderMethodArgumentResolver
+11. RequestHeaderMapMethodArgumentResolver
+12. ServletCookieValueMethodArgumentResolver
+13. ExpressionValueMethodArgumentResolver
+14. SessionAttributeMethodArgumentResolver
+15. RequestAttributeMethodArgumentResolver
+16. ServletRequestMethodArgumentResolver
+17. ServletResponseMethodArgumentResolver
+18. HttpEntityMethodProcessor
+19. RedirectAttributesMethodArgumentResolver
+20. ModelMethodProcessor
+21. MapMethodProcessor
+22. ErrorsMethodArgumentResolver
+23. SessionStatusMethodArgumentResolver
+24. UriComponentsBuilderMethodArgumentResolver
+25. RequestParamMethodArgumentResolver
+26. ServletModelAttributeMethodProcessor
+
+DefaultReturnValueHandlers
+
+1. ModelAndViewMethodReturnValueHandler
+2. ModelMethodProcessor
+3. ViewMethodReturnValueHandler
+4. ResponseBodyEmitterReturnValueHandler
+5. StreamingResponseBodyReturnValueHandler
+6. HttpEntityMethodProcessor
+7. HttpHeadersReturnValueHandler
+8. CallableMethodReturnValueHandler
+9. DeferredResultMethodReturnValueHandler
+10. AsyncTaskMethodReturnValueHandler
+11. ModelAttributeMethodProcessor
+12. RequestResponseBodyMethodProcessor
+13. ViewNameMethodReturnValueHandler
+14. MapMethodProcessor
 
 #### DispatcherServlet处理http get请求
 
