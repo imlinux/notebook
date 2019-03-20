@@ -19,9 +19,11 @@
 
 ### 数字签名公式
 
+[资料](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
+
 Signature = RSA(sha256(Data), IssuerPrivateKey)
 
-
+使用IssuerPublicKey解密Signature，获的sha256(Data),然后再用sha(实际的data)，如果两个值相同即表明Signature是用IssuerPrivateKey签名的。
 
 
 ### pks12转换为pem

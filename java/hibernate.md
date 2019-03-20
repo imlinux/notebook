@@ -118,20 +118,128 @@ StrategySelector使用StrategySelectorBuilder来创建,StrategySelectorBuilder\#
 #### Hibernate user guide阅读
 
 ##### 问题
-1. 2.3.2中的FetchType，文档中显示hibernate会忽略这个，除非使用bytecode enhancement。这个属性有什么影响？bytecode enhancement是什么？有什么用？
 
+1. 2.3.2中的FetchType，文档中显示hibernate会忽略这个，除非使用bytecode enhancement。这个属性有什么影响？bytecode enhancement是什么？有什么用？
 
 #### 字段
 
-1. (basic-jpa-convert)[http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#basic-jpa-convert]
-
+1. [basic-jpa-convert](http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#basic-jpa-convert)
 
 #### 实体关系
 
-@ManyToOne  
+**@ManyToOne**  
 单向关系时，通过外键实现  
 
-@OneToMany
+**@OneToMany**  
+单向关系通过新创建一个关系表来实现，性能不好[参考官方文档说明](http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-many)  
+双向关系通过外键来实现ManyToOne端作为关系的控制端，当使用OneToMany时最佳实践是使用双向关系
 
-通过新建一个关联表是实现，  
-单向关系时性能不好(参考官方文档说明)[http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-many]  双向关系时ManyToOne端作为关系的控制端，当使用OneToMany时最佳实践是使用双向关系
+**mappedBy**  
+建立双向关系的时候使用，关系的控制端在另一方，如：
+
+```java
+
+@Entity(name = "Person")
+public class Person {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String name;
+
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
+    private List<Phone> phones = new ArrayList<>();
+
+    public void addPhone(Phone phone) {
+        phones.add( phone );
+        phone.setPerson( this );
+    }
+
+    public void removePhone(Phone phone) {
+        phones.remove( phone );
+        phone.setPerson( null );
+    }
+}
+
+@Entity(name = "Phone")
+public class Phone {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "`number`")
+    private String number;
+
+    @ManyToOne
+    private Person person;
+}
+
+```
+
+控制端在Phone实体中，mappedBy指的是Phone中的person属性，在非控制端要使用工具方法进行同步如：`addPhone和removePhone`方法  
+
+**orphanRemoval**  
+当关系删除后，是否删除实体
+
+**OneToOne**  
+单向关系和双向关系都是通过数据库外键实现，双向关系示例
+
+```java
+@Entity(name = "Phone")
+public class Phone {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(name = "`number`")
+    private String number;
+
+    @ManyToOne
+    private Person person;
+
+
+    @OneToOne(
+            mappedBy = "phone",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
+    )
+    private PhoneDetails details;
+
+    public void addDetails(PhoneDetails details) {
+        details.setPhone( this );
+        this.details = details;
+    }
+
+    public void removeDetails() {
+        if ( details != null ) {
+            details.setPhone( null );
+            this.details = null;
+        }
+    }
+}
+
+@Entity(name = "PhoneDetails")
+public class PhoneDetails {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String provider;
+
+    private String technology;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "phone_id")
+    private Phone phone;
+}
+```
+
+`addDetails和removeDetails`为同步方法
+
+**@ManyToMany**  
+单向关系和双向关系都需要关联表来实现
