@@ -79,6 +79,10 @@
 
 ### Spring MVC
 
+#### SpringServletContainerInitializer
+
+servlet 3.0的接口ServletContainerInitializer，用来支持通过程序来配置servler容器，用来替代web.xml
+
 #### DispatcherServlet初始化时序图
 
 ```plantuml

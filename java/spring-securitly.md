@@ -1,11 +1,16 @@
 
-## 入口类
+## 入口
 
-1. DelegatingFilterProxy
-2. FilterChainProxy
+EnableWebSecurity注解和AutoConfig
 
-## WebSecurityConfigurerAdapter默认配置
+### spring配置类
 
-### getHttp()
+WebSecurityConfiguration通过EnableWebSecurity自动导入，WebSecurityConfiguration最重要的字段WebSecurity  
+WebSecurity通过builder设计模式实现，通过SecurityConfigurer来实现配置WebSecurity,最终通过调用build方法来实例化出Filter
 
-1. 实例化AuthenticationManager，
+
+### FilterChainProxy
+
+### WebSecurityConfigurerAdapter默认的Filter
+
+```securityContext()```将认证好的对象存在起来
