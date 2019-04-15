@@ -20,8 +20,6 @@
  BeanWrapperImpl，实际开发中使用PropertyAccessorFactory#forBeanPropertyAccess来获取实例  
  DataBinder, bind方法使用BeanWrapper来给java bean的字段赋值，
 
-
-
 #### 抽象类
 
 1. ***AbstractApplicationContext核心类，spring的初始化逻辑都在这里面，查看这个类可以明白spring的各个功能怎么使用。***
@@ -40,17 +38,17 @@
 
 实现类：PropertySourcesPlaceholderConfigurer，
 
-### BeanPostProcessor 
+### BeanPostProcessor
 
 ## Transaction
 
-#### 接口
+### 接口
 
 1. PlatformTransactionManager核心接口，用于抽象事务操作，目前有3中实现：DataSourceTransactionManager对应与普通的jdbc，JtaTransactionManager对应jta事务管理，HibernateTransactionManager对应hinernate 的事务管理
 2. TransactionDefinition定义一个事务，包括事务的传播，超时，然后使用PlatformTransactionManager创建
 3. TransactionStatus代表一个事务。
 
-#### 开发模式
+### 开发模式
 
 1. xml配置或注解的方式
 
@@ -60,9 +58,9 @@
    1. 使用TransactionTemplate
    2. 直接使用PlatformTransactionManager
 
-### 任务执行和调度
+## 任务执行和调度
 
-#### 接口
+### 接口
 
 1. TaskExecutor
 

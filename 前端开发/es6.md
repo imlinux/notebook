@@ -320,10 +320,6 @@ let y = new Inheritance(3, 4, 5)
 
 ```js
 
-//index.html
-<script src="export.js"></script>
-<script type="module" src="import.js"></script>
-
 //export.js
 let func = a => a + a
 let obj = {}
@@ -335,6 +331,10 @@ export { func, obj, x }
 import { func, obj, x } from './export.js'
 
 console.log(func(3), obj, x)
+
+import * as info from './export.js'
+
+console.log(info.x)
 
 ```
 
