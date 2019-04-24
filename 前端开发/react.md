@@ -590,4 +590,22 @@ redux构成了单向数据流来管理应用程序的状态.
 3. root reducer合并各个reducer的输出为一个state大结构然后返回
 4. redux保存root reducer返回的state
 
-# react-redux
+## 与react搭配使用
+
+### react-redux
+
+使用react-redux将react和redux绑定起来使用
+
+#### 展示组件和容器组件
+
+|  | 展示组件 | 容器组件 |
+| ----- | ----- | --- |
+| 目的 | 界面展示 | 数据获取, 状态改变 |
+| 知道redux | 否 | 是 |
+| 如何改变数据 | 调用props中传进来的回调函数 | dispatch redux action |
+| 是否需要编写 | 是| 通过redux-react生成
+
+## 资料
+
+[redux入门](https://daveceddia.com/how-does-redux-work/)  
+pdf中的the-road-to-learn-react-chinese.pdf
