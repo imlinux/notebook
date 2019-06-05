@@ -37,6 +37,13 @@ nodeClient内部维护`Map<GenericAction, TransportAction> actions`,每种服务
 
 ### NetworkModule
 
+### NetworkService
+
+有两个方法, 负责命名解析
+
+1. resolveBindHostAddresses
+2. resolvePublishHostAddresses
+
 #### Transport
 
 集群内部的节点通信使用，[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-transport.html)
@@ -90,7 +97,7 @@ end
 
 ### TransportService
 
-绑定scoket  
+使用Transport来通信, 实现业务代码
 
 ### NodeConnectionsService
 
