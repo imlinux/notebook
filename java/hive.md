@@ -67,3 +67,54 @@ HiveServer2#startHiveServer2
 
 
 ### Hive操作meta的工具类
+
+## Hook接口
+
+执行一些回调
+
+## 执行sql流程
+
+```plantuml
+
+start
+
+:runBeforeParseHook;
+note right
+生成语法树之前, 回调插件. 此处有机会修改sql语句
+end note
+
+:parse;
+note right
+sql语法解析, 生成语法树
+end note
+
+:runAfterParseHook;
+note right
+生成语法树后, 回调插件, 此处有机会修改语法树
+end note
+
+:runPreAnalyzeHooks;
+note right
+语义分析前, 回调插件
+end note
+
+:analyze;
+note right
+语义分析, 生成查询计划
+end note
+
+:runPostAnalyzeHooks;
+note right
+语义分析后, 回调插件, 此处有机会修改查询计划
+end note
+
+:runBeforeExecutionHook;
+:execute;
+note right
+执行查询计划
+end note
+:runBeforeExecutionHook;
+
+stop
+
+```

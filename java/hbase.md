@@ -150,6 +150,9 @@ DefaultMemStore 保存一些Cell，会定时刷新到磁盘上面，内部使用
 1. RpcClient负责与服务端交互
    由RpcClientFactory创建org.apache.hadoop.hbase.ipc.BlockingRpcClient
 
+## 工具类
+
+1. http-client包里面的org.apache.hadoop.hbase.protobuf  
 
 ## 资料
 
