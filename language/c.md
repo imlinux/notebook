@@ -2,6 +2,8 @@
 
 1. Autotools
 2. cmake
+3. ldd查看共享库的依赖
+4. nm查看共享库中的符号
 
 ### wait,waitpid
 

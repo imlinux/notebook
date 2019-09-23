@@ -12,7 +12,8 @@ npm init -y
 
 ## 配置webpack
 
-webpack将jsx代码转译为可以在浏览器中执行的js代码
+webpack将jsx代码转译为可以在浏览器中执行的js代码.  
+webpack提供了命令行接口和api接口,其中webpackage-cli提供了命令行交互
 
 ### 安装webpack
 
