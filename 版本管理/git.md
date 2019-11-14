@@ -32,7 +32,12 @@
 
 1. git config --global core.quotepath false
 
-git ssh代理配置
+### git删除分支
+
+1. git branch -d <BranchName> 删除本地分支
+2. git push origin --delete <BranchName>　删除远程分支
+
+###git ssh代理配置
 
 ```text
 git config --global http.proxy 'socks5://127.0.0.1:1080' 
