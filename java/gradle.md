@@ -39,3 +39,8 @@ task taskY {
 ## 插件
 
 task集合
+
+
+## 配置国内
+
+gradle/wrapper/gradle-wrapper.properties文件中添加属性`services.gradle.org=http\://downloads.gradle-dn.com`
