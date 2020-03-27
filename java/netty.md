@@ -18,6 +18,8 @@
 
 ## ChannelPipeline
 
+打开这个类的源码, 有详细的介绍netty的io事件处理流程
+
 ### DefaultChannelPipeline
 
 ## EventLoopGroup
