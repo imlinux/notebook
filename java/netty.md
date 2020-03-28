@@ -34,3 +34,8 @@
 
 ## NioServerSocketChannel绑定过程
 
+
+## 使用netty的注意事项
+
+[netty资源回收约定](https://netty.io/wiki/reference-counted-objects.html)
+
